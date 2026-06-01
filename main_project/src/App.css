@@ -1,0 +1,1590 @@
+:root {
+  --primary-pink: #ff526c;
+  --primary-orange: #f29924;
+  --dark-blue: #0c2238;
+  --text-gray: #666666;
+  --teal-cyan: #00a7ac;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.liggeet-layout-wrapper {
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* Common Container Utility for alignment */
+.banner-container,
+.branding-container,
+.hero-content,
+.branding-nav-container,
+.features-grid,
+.open-day-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Standardizes layout gutters across rows */
+  width: 100%;
+}
+
+/* ==========================================================================
+   Shared Logo Component Styles
+   ========================================================================== */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon svg {
+  width: 45px;
+  height: 45px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text .sub-title {
+  font-size: 14px;
+  color: var(--primary-orange);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.logo-text .main-title {
+  font-size: 28px;
+  color: var(--dark-blue);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+/* ==========================================================================
+   Screenshot 1 Legacy Elements (Retained for Core Layout Support)
+   ========================================================================== */
+.top-banner {
+  background-color: var(--primary-pink);
+  color: #ffffff;
+  font-size: 13px;
+  padding: 12px 0;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+.banner-links .separator {
+  opacity: 0.5;
+  margin-left: 16px;
+}
+
+.main-branding-row {
+  background-color: #ffffff;
+  padding: 25px 0 45px 0;
+}
+
+.branding-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.contact-info-block {
+  display: flex;
+  gap: 40px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--teal-cyan);
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  font-size: 14px;
+  color: var(--dark-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 550px;
+  background: linear-gradient(rgba(12, 34, 56, 0.4), rgba(12, 34, 56, 0.2)), 
+              url('https://html.tonatheme.com/2025/liggeet/assets/images/banner/banner-image-01.jpg') no-repeat center center/cover;
+}
+
+.nav-bar {
+  position: absolute;
+  top: -25px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  padding: 22px 20px;
+  position: relative;
+}
+
+.nav-links li:first-child {
+  padding-left: 24px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--dark-blue);
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.nav-links li.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  height: 3px;
+  background-color: var(--primary-orange);
+}
+
+.nav-links li:first-child.active::after {
+  left: 24px;
+}
+
+.cta-btn {
+  background-color: var(--primary-orange);
+  color: #ffffff;
+  border: none;
+  padding: 22px 40px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #d6811a;
+}
+
+.hero-content {
+  padding-top: 140px;
+}
+
+.hero-text-container {
+  display: inline-block;
+}
+
+.hero-tagline {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.hero-tagline::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 110%;
+  height: 3px;
+  background-color: var(--primary-orange);
+  border-radius: 50%;
+}
+
+.hero-title {
+  color: #ffffff;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: 1px;
+}
+
+.branding-nav-row {
+  background-color: #ffffff;
+  padding: 24px 0;
+}
+
+.branding-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inline-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.inline-nav-links li {
+  position: relative;
+  padding: 6px 0;
+}
+
+.inline-nav-links li a {
+  text-decoration: none;
+  color: var(--dark-blue);
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.inline-nav-links li a:hover {
+  color: var(--primary-orange);
+}
+
+.inline-nav-links li.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-orange);
+}
+
+/* Sub-Page Mid Banner */
+.features-banner-wrapper {
+  width: 100%;
+  height: 340px;
+}
+
+.features-banner-image {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Bottom Grid Section Content */
+.grid-content-wrapper {
+  position: relative;
+  padding: 110px 0 130px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin: 0;
+}
+
+.feature-description {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+/* Background Vectors Placement Rules */
+.vector-left-squiggly {
+  position: absolute;
+  left: -20px;
+  top: 50px;
+  width: 120px;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ==========================================================================
+   10. Screenshot 3 Elements: Open Day Layout Grid
+   ========================================================================== */
+.open-day-section {
+  position: relative;
+  width: 100%;
+  padding: 70px 0 100px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.open-day-container {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr; /* Matches standard asymmetrical visual density layout proportions */
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Stack Grid Arrangement Box */
+.image-stack-box {
+  position: relative;
+  width: 100%;
+  height: 520px;
+}
+
+.main-student-img {
+  width: 85%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.main-student-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlapping Card Element Layout styling rules */
+.floating-group-img {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  width: 48%;
+  height: 52%;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 10px; /* Produces the seamless clean white border drop framework look */
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.floating-group-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Right Content Box Framework Layout styling rules */
+.open-day-content-box {
+  position: relative;
+  width: 100%;
+}
+
+/* Subtle background map silhouette vector simulation watermark graphic */
+.watermark-map-bg {
+  position: absolute;
+  top: -40px;
+  right: -60px;
+  width: 110%;
+  height: 120%;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_black_white.svg') no-repeat right center/contain;
+  opacity: 0.03; /* Maintains visibility constraints while avoiding textual collisions */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.content-inner-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.accent-cap-icon svg {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 25px;
+}
+
+.section-tagline {
+  display: block;
+  font-size: 14px;
+  color: var(--primary-pink);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.section-main-heading {
+  font-size: 42px;
+  color: var(--dark-blue);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+/* Dark layout underline block indicator matching snapshot template architecture specs */
+.section-main-heading::after {
+  content: '';
+  display: block;
+  width: 55px;
+  height: 3px;
+  background-color: var(--dark-blue);
+  margin-top: 14px;
+}
+
+.section-paragraph-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-gray);
+  margin-bottom: 30px;
+}
+
+/* Programs Menu Links 2x2 Grid setup */
+.programs-links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 16px;
+  column-gap: 24px;
+  margin-bottom: 35px;
+}
+
+.program-link-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Tiny orange dash box icon bullet indicators */
+.program-link-item .bullet-arrow {
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary-orange);
+  border-radius: 1px;
+}
+
+.program-link-item a {
+  text-decoration: none;
+  color: var(--dark-blue);
+  font-weight: 700;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.program-link-item a:hover {
+  color: var(--primary-pink);
+}
+
+/* Call to Action Button Layout specifications matching layout standard design metrics rules */
+.more-details-btn {
+  background-color: var(--primary-orange);
+  color: #ffffff;
+  border: none;
+  padding: 16px 36px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.more-details-btn:hover {
+  background-color: #d6811a;
+}
+
+.lab-section-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 620px; /* Adapts cleanly to the horizontal desktop browser grid ratio */
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+/* Hero Background Image Box Frame matching template dimensions */
+.lab-bg-hero-showcase {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%; 
+  height: 100%;
+  z-index: 1;
+}
+
+.lab-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
+}
+
+.lab-container-overlay {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.lab-content-card {
+  background: rgba(255, 255, 255, 0.96); 
+  width: 100%;
+  max-width: 440px;
+  padding: 50px 45px;
+  border-radius: 12px;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.lab-main-heading {
+  font-size: 38px;
+  color: var(--dark-blue);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.lab-main-heading::after {
+  content: '';
+  display: block;
+  width: 55px;
+  height: 3px;
+  background-color: var(--dark-blue);
+  margin-top: 14px;
+}
+
+.lab-description-text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-gray);
+  margin-bottom: 35px;
+}
+
+.lab-details-btn {
+  background-color: #ef5b6c;
+  color: #ffffff;
+  border: none;
+  padding: 16px 36px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start; 
+  transition: background-color 0.2s ease;
+}
+
+.lab-details-btn:hover {
+  background-color: #dc4859;
+}
+
+/* ==========================================================================
+   12. Screenshot 5 Elements: Pink Statistics Counter Section
+   ========================================================================== */
+.stats-section-wrapper {
+  width: 100%;
+  background-color: var(--primary-pink); /* Utilizes your exact core pink design token token variable */
+  padding: 85px 0; /* Creates perfect vertical spatial padding symmetry above and below counters */
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Forms a pixel-perfect 4-column row layout */
+  gap: 30px;
+  align-items: center;
+}
+
+.stat-counter-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff; /* Locks elements text layout profile to pure white */
+}
+
+.stat-number-value {
+  font-size: 56px;
+  font-weight: 800; /* Extra bold text formatting weight matching snapshot hierarchy metrics */
+  letter-spacing: 1px;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.stat-label-text {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px; /* Broad letter spacing layout signature matching template */
+  opacity: 0.95;
+  line-height: 1.3;
+}
+
+/* Responsive breakpoint scaling to prevent spatial crunching on mobile views */
+@media (max-width: 768px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr); /* Drops smoothly down into a 2x2 grid framework row format */
+    row-gap: 50px;
+  }
+}
+
+/* ==========================================================================
+   13. Screenshot 6 Elements: 4-Column Overlay Showcase Grid
+   ========================================================================== */
+.showcase-section-wrapper {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0 0 60px 0; /* Clear bottom margins padding layout boundaries */
+}
+
+.showcase-grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Forms exact 4 equal columns across layout grid */
+  gap: 24px; /* Standardize card separation margins */
+}
+
+.showcase-card {
+  position: relative;
+  width: 100%;
+  height: 480px; /* Aligns to vertical card height geometry proportion ratios */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Pushes floating title overlay block to bottom edge boundary */
+  overflow: visible; /* Permits text box overlays to hang out cleanly */
+}
+
+/* Structural Image container configuration */
+.showcase-image-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%; 
+  overflow: hidden;
+}
+
+.showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Stops graphic asset warping on grid compression scaling */
+  transition: transform 0.4s ease;
+}
+
+/* Slight interactive graphic hover scale effect */
+.showcase-card:hover .showcase-img {
+  transform: scale(1.04);
+}
+
+/* Overlapping bottom text label platform block precisely matched to template specs */
+.showcase-content-label {
+  position: relative;
+  width: 86%; /* Constrains panel width inside card image borders */
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.06);
+  z-index: 2;
+  border-left: 3px solid var(--primary-pink); /* Embedded pink line branding feature left track edge */
+}
+
+.showcase-card-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--dark-blue);
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Fluid responsive breakpoint layouts for tablet/mobile view structural security */
+@media (max-width: 992px) {
+  .showcase-grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Switches to an orderly 2x2 grid when view elements pinch */
+    row-gap: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .showcase-grid-container {
+    grid-template-columns: 1fr; /* Completely normalizes to straight vertical column stacks on smartphone displays */
+  }
+}
+
+/* ==========================================================================
+   14. Screenshots 7 & 8 Combined Elements: Our Studies 2x4 Grid System
+   ========================================================================== */
+.studies-section-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 80px 0 120px 0;
+  overflow: hidden;
+}
+
+.studies-section-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.studies-tagline {
+  display: block;
+  font-size: 15px;
+  color: var(--primary-pink);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.studies-main-heading {
+  font-size: 44px;
+  color: var(--dark-blue);
+  font-weight: 800;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+/* Centralized flat layout underline marker bar */
+.studies-main-heading::after {
+  content: '';
+  display: block;
+  width: 65px;
+  height: 3px;
+  background-color: var(--dark-blue);
+  margin: 20px auto 0 auto;
+}
+
+/* Clean 4-Column Row, Multi-Row Grid Layout wrapper matching structural grid gutters */
+.studies-grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 horizontal blocks */
+  /* Borders serve as the clean internal separator lines between boxes */
+  border-top: 1px solid #f0f2f5;
+}
+
+.study-grid-item {
+  background-color: #ffffff;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-bottom: 1px solid #f0f2f5;
+  border-right: 1px solid #f0f2f5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Erase outer right borders on every 4th item to keep grid aligned nicely */
+.study-grid-item:nth-child(4n) {
+  border-right: none;
+}
+
+/* Erase first item's left border footprint to guarantee alignment with header margin paths */
+.study-grid-item:nth-child(4n+1) {
+  padding-left: 20px;
+}
+
+.study-item-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin: 0;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.study-grid-item:hover .study-item-title {
+  color: var(--primary-orange); /* Smooth primary brand color swap on active cards */
+}
+
+.study-item-description {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+/* Desktop to multi-tier viewport adaptation fallbacks */
+@media (max-width: 992px) {
+  .studies-grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Drops smoothly down into pairs */
+  }
+  .study-grid-item:nth-child(2n) {
+    border-right: none;
+  }
+  .study-grid-item:nth-child(4n+1) {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .studies-grid-container {
+    grid-template-columns: 1fr; /* Stack vertically cleanly */
+  }
+  .study-grid-item {
+    border-right: none;
+    padding: 40px 20px !important;
+  }
+}
+
+/* ==========================================================================
+   15. Screenshots 9 & 10 Combined Elements: Latest News Section
+   ========================================================================== */
+.news-section-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #fff6f6; /* Creates the soft off-white/pink hue layer seen in the screenshots */
+  padding: 80px 0 100px 0;
+  overflow: hidden;
+}
+
+/* Aligns titles to the left and the mini banner action button to the right side */
+.news-section-header {
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.news-tagline {
+  display: block;
+  font-size: 15px;
+  color: var(--primary-pink);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.news-main-heading {
+  font-size: 42px;
+  color: var(--dark-blue);
+  font-weight: 800;
+  line-height: 1.1;
+  position: relative;
+  margin: 0;
+}
+
+/* Base structural bar line accent under main category text */
+.news-main-heading::after {
+  content: '';
+  display: block;
+  width: 55px;
+  height: 3px;
+  background-color: var(--dark-blue);
+  margin-top: 14px;
+}
+
+/* View All News Button Component Outline Border */
+.view-all-news-btn {
+  background-color: transparent;
+  color: var(--primary-pink);
+  border: 1.5px solid rgba(255, 82, 108, 0.3);
+  padding: 16px 36px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-all-news-btn:hover {
+  background-color: var(--primary-pink);
+  color: #ffffff;
+  border-color: var(--primary-pink);
+}
+
+/* Three-Column Grid Content Wrapper Frame */
+.news-grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Individual Content Cards Card Layer */
+.news-card-item {
+  background-color: #ffffff;
+  border-radius: 16px; /* Produces the soft rounded image look shown in screenshots */
+  overflow: hidden;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 35px 0;
+}
+
+/* Restrains the card thumbnail image */
+.news-image-frame {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.news-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.news-card-item:hover .news-card-img {
+  transform: scale(1.03);
+}
+
+/* Meta Data Context Row Rules */
+.news-card-meta-bar {
+  padding: 24px 30px 12px 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.meta-author,
+.meta-date {
+  font-size: 13px;
+  color: var(--text-gray);
+  position: relative;
+  font-weight: 500;
+}
+
+/* Subtle typography alignment spaces matching standard text themes */
+.meta-author {
+  padding-left: 0;
+}
+
+.news-card-body {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.news-card-title {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--dark-blue);
+  line-height: 1.35;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.news-card-title:hover {
+  color: var(--primary-pink);
+}
+
+.news-card-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+/* Decorative Accent Element Mappings */
+.news-top-heart-accent {
+  position: absolute;
+  top: 40px;
+  right: 15%;
+  width: 55px;
+  height: 55px;
+  pointer-events: none;
+  transform: rotate(-15deg);
+}
+
+
+/* Tablet and Smartphone Flow Breakpoint Resets */
+@media (max-width: 992px) {
+  .news-grid-container {
+    grid-template-columns: 1fr; /* Transforms cards into clean stacked blocks on narrower windows */
+    gap: 40px;
+  }
+  .news-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+/* ==========================================================================
+   16. Screenshots 11 & 12 Elements: Hero Slide & Overlapping Event Tabs
+   ========================================================================== */
+.main-hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 720px; /* Expands heights parameters to hold both copy and bottom tabs safely */
+  background-color: var(--dark-blue);
+  overflow: hidden;
+}
+
+/* Absolute Media Element Box Layer */
+.hero-background-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%; /* Pushes background line up slightly matching bottom white container track */
+  z-index: 1;
+}
+
+.hero-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-media-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(12, 34, 56, 0.45), rgba(12, 34, 56, 0.3));
+}
+
+/* Center Column Structural Gutter Alignment Container */
+.hero-copy-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  position: relative;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+}
+
+.hero-copy-inner {
+  text-align: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.hero-copy-tagline {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Dual line underline style match seen in the first screenshot */
+.hero-copy-tagline::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: -5%;
+  width: 110%;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0px 3px 0px var(--primary-orange); /* Double line trace effect */
+}
+
+.hero-copy-title {
+  color: #ffffff;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+/* Slider Left/Right Chevron Component Layout Specs */
+.carousel-arrow-btn {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 4;
+  transition: color 0.2s ease;
+}
+
+.carousel-arrow-btn:hover {
+  color: #ffffff;
+}
+
+.arrow-left { left: 40px; }
+.arrow-right { right: 40px; }
+
+/* Teal Vector Loop Element Placement */
+.hero-teal-arrow-accent {
+  position: absolute;
+  top: 70px;
+  right: 12%;
+  width: 130px;
+  height: 130px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   Bottom Positioned Event Dock Tabs (Screenshot 12 Blueprint Architecture)
+   ========================================================================== */
+.hero-bottom-events-dock {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.events-dock-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end; /* Locks elements flush along the base layout timeline line */
+}
+
+/* Base Dynamic Card Frame Container */
+.event-dock-tab-card {
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Active Expanded State: Bright Pink Feature Block Container */
+.event-dock-tab-card.is-expanded {
+  width: 320px;
+  background-color: var(--primary-pink);
+  color: #ffffff;
+  padding: 40px 35px;
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+/* Tiny bottom triangle indicator pointing downward on expanded white row */
+.event-dock-tab-card.is-expanded::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 45px;
+  border-width: 10px 10px 0 10px;
+  border-style: solid;
+  border-color: var(--primary-pink) transparent transparent transparent;
+}
+
+.expanded-card-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.expanded-date-badge {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.expanded-day {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.expanded-month {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.expanded-event-title {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 22px;
+}
+
+.expanded-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 10px;
+}
+
+/* Subtle dot representations placeholder for time/location icons */
+.meta-time-icon, .meta-loc-icon {
+  width: 5px;
+  height: 5px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.expanded-card-link {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+/* Inactive Collapsed Strip Style Layout Rules */
+.event-dock-tab-card.is-collapsed {
+  flex: 1; /* Automatically spreads remaining empty row slots across layout */
+  background-color: rgba(12, 34, 56, 0.85); /* Semitransparent slate strip container look */
+  backdrop-filter: blur(5px);
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  height: 95px; /* Fixed profile to sit lower than bright pink highlighted component */
+}
+
+.event-dock-tab-card.is-collapsed:hover {
+  background-color: rgba(12, 34, 56, 0.95);
+}
+
+.collapsed-card-inner {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.collapsed-day-number {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.collapsed-month-text {
+  font-size: 15px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+/* Viewport Adjustments for Tablet Scalings */
+@media (max-width: 768px) {
+  .hero-copy-title { font-size: 38px; }
+  .events-dock-container { flex-direction: column; align-items: stretch; }
+  .event-dock-tab-card.is-expanded { width: 100%; }
+  .event-dock-tab-card.is-collapsed { height: auto; padding: 20px; }
+  .main-hero-carousel { height: auto; min-height: 600px; }
+}
+
+/* ==========================================================================
+   17. Screenshot 13 Elements: Trusted By 1k+ Companies Logo Grid
+   ========================================================================== */
+.trusted-partners-section {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 100px 0 110px 0; /* Creates wide vertical padding layouts seen in the showcase track */
+  overflow: hidden;
+}
+
+.partners-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally groups title text and row layouts to exact center */
+}
+
+.partners-heading {
+  font-size: 32px;
+  color: var(--dark-blue);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-bottom: 60px; /* Separates heading cleanly from the corporate logos track below */
+}
+
+/* 5-Column Symmetrical Grid Alignment Row for Client Logos */
+.partners-logos-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  opacity: 0.5; /* Yields that soft, modern corporate greyscale silhouette layout styling */
+  transition: opacity 0.3s ease;
+}
+
+.partners-logos-row:hover {
+  opacity: 0.75; /* Smooth activation glow when interacting over logo block track */
+}
+
+.partner-logo-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+/* Individual Brand Silhouette Type Forms precisely styled to look identical to screenshot models */
+.partner-brand-logo-ui {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333333;
+}
+
+.logo-utopix .brand-main-text {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.logo-palm-marina .brand-main-text {
+  font-family: 'Georgia', serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.logo-palm-marina .brand-sub-text {
+  font-size: 6px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.logo-minimal .brand-main-text {
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.logo-smatrics .brand-main-text,
+.logo-smatrics-duplicate .brand-main-text {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.logo-smatrics .brand-sub-text,
+.logo-smatrics-duplicate .brand-sub-text {
+  font-size: 7px;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+  margin-top: -2px;
+}
+
+/* Bottom corner circular layout branding ring token */
+.partners-corner-accent-ring {
+  position: absolute;
+  right: 50px;
+  bottom: 30px;
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid var(--primary-pink);
+  border-radius: 50%;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Fluid Viewport adjustments to prevent partner tags from spilling off portable displays */
+@media (max-width: 992px) {
+  .partners-logos-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Splits into a cleanly distributed 3-wide map layer */
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .partners-heading {
+    font-size: 24px;
+  }
+  .partners-logos-row {
+    grid-template-columns: repeat(2, 1fr); /* Shrinks layout cleanly to simple pairs on phone tracking widths */
+  }
+}
+
+/* ==========================================================================
+   18. Screenshots 14 & 15 Combined Elements: Instagram Grid Layout
+   ========================================================================== */
+.instagram-section-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 80px 0 100px 0;
+  overflow: hidden;
+}
+
+.instagram-section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.instagram-tagline {
+  display: block;
+  font-size: 15px;
+  color: var(--primary-pink);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.instagram-main-heading {
+  font-size: 38px;
+  color: var(--dark-blue);
+  font-weight: 800;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+/* Central layout block line decoration beneath username heading text */
+.instagram-main-heading::after {
+  content: '';
+  display: block;
+  width: 55px;
+  height: 3px;
+  background-color: var(--dark-blue);
+  margin: 18px auto 0 auto;
+}
+
+/* Symmetrical 4-Column Grid System spanning full wrapper content bounds */
+.instagram-grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 identical square slots across */
+  gap: 24px; /* Standard separation margins between frame blocks */
+}
+
+.instagram-grid-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Locks photo frame blocks to perfect squares regardless of window scale */
+}
+
+.instagram-image-frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.instagram-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevents texturing distortions on cell scaling */
+  transition: transform 0.4s ease;
+}
+
+/* Smooth social link interactive hover mask element */
+.instagram-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(12, 34, 56, 0.4); /* Dark translucent brand blend veil */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.instagram-icon-placeholder {
+  font-size: 24px;
+  color: #ffffff;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+/* Hover behaviors */
+.instagram-image-frame:hover .instagram-hover-overlay {
+  opacity: 1;
+}
+
+.instagram-image-frame:hover .instagram-icon-placeholder {
+  transform: scale(1);
+}
+
+.instagram-image-frame:hover .instagram-img {
+  transform: scale(1.05);
+}
+
+
+
+/* Adaptive media query limits for small display devices */
+@media (max-width: 992px) {
+  .instagram-grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Collapses down cleanly into 2 columns on tablets */
+    gap: 16px;
+  }
+  .instagram-main-heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .instagram-grid-container {
+    grid-template-columns: 1fr; /* Complete single-column vertical track on modern touch devices */
+  }
+}

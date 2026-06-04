@@ -1619,18 +1619,14 @@
   }
 }
 
-/* ==========================================================================
-   20. Screenshot 17 Elements: Main Site Footer Layout Section
-   ========================================================================== */
 .main-site-footer {
   position: relative;
   width: 100%;
-  background-color: #232d3b; /* Fallback solid slate dark background layer */
-  padding: 90px 0 0 0; /* Keeps zero padding bottom to allow copyright bar flush layout */
+  background-color: #232d3b; 
+  padding: 90px 0 0 0; 
   overflow: hidden;
 }
 
-/* Background image texture rules */
 .footer-bg-media {
   position: absolute;
   top: 0;
@@ -1644,7 +1640,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.12; /* Dark ambient blending layout constraint matching screenshot depth */
+  opacity: 0.12; 
 }
 
 .footer-dark-overlay {
@@ -1657,15 +1653,14 @@
   opacity: 0.88;
 }
 
-/* Symmetrical 4-Column Responsive Layout Grid Container */
 .footer-grid-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px 70px 20px; /* Generates wide spacing track separator block above copyright line */
+  padding: 0 20px 70px 20px; 
   width: 100%;
   position: relative;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr; /* Asymmetric column density logic to map spacing */
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr; 
   gap: 50px;
   z-index: 2;
 }
@@ -1675,7 +1670,6 @@
   flex-direction: column;
 }
 
-/* White Variation Footer Logo Layout specs */
 .footer-logo-area {
   display: flex;
   align-items: center;
@@ -1704,7 +1698,7 @@
 
 .footer-logo-text .f-main-title {
   font-size: 28px;
-  color: #ffffff; /* pure white contrast adjustment */
+  color: #ffffff; 
   font-weight: bold;
   letter-spacing: 0.5px;
   line-height: 1.1;
@@ -1713,11 +1707,10 @@
 .footer-intro-text {
   font-size: 15px;
   line-height: 1.65;
-  color: #adb5bd; /* Soft light-slate text color for ambient dark backgrounds */
+  color: #adb5bd; 
   margin-bottom: 30px;
 }
 
-/* Contact Block Formations */
 .footer-contact-info {
   display: flex;
   flex-direction: column;
@@ -1755,7 +1748,6 @@
   font-weight: 600;
 }
 
-/* Highlight Orange Text Links */
 .branches-link-btn {
   font-size: 15px;
   font-weight: 700;
@@ -1768,13 +1760,12 @@
   color: #ffffff;
 }
 
-/* Right Side Multi-Link Column Typography rules */
 .footer-col-title {
   font-size: 22px;
   color: #ffffff;
   font-weight: 700;
   margin-bottom: 30px;
-  margin-top: 10px; /* Aligns visually with logo text center points */
+  margin-top: 10px; 
 }
 
 .footer-links-list {
@@ -1793,7 +1784,7 @@
 
 .footer-links-list li a:hover {
   color: #ffffff;
-  padding-left: 4px; /* Soft micro-interaction shift on list item select */
+  padding-left: 4px; 
 }
 
 /* ==========================================================================
@@ -1801,7 +1792,7 @@
    ========================================================================== */
 .footer-copyright-bar {
   width: 100%;
-  border-top: 1px solid rgba(235, 221, 221, 0.06); /* Highly muted row divider boundary line */
+  border-top: 1px solid rgba(235, 221, 221, 0.06); 
   padding: 30px 0;
   position: relative;
   z-index: 2;
@@ -1819,17 +1810,16 @@
   color: #868e96;
 }
 
-/* Responsive constraints handling layout drop flow scales */
 @media (max-width: 992px) {
   .footer-grid-container {
-    grid-template-columns: repeat(2, 1fr); /* Splits into pairs comfortably on tablet footprints */
+    grid-template-columns: repeat(2, 1fr); 
     row-gap: 40px;
   }
 }
 
 @media (max-width: 576px) {
   .footer-grid-container {
-    grid-template-columns: 1fr; /* Compresses cleanly into a single vertical link block stack on phones */
+    grid-template-columns: 1fr; 
     gap: 35px;
   }
   .footer-col-title {

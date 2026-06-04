@@ -3,11 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className="liggeet-layout-wrapper">
-
-      {/* Main Footer Section Component */}
       <footer className="main-site-footer">
-        
-        {/* Dark Translucent Architecture Overlay Background */}
         <div className="footer-bg-media">
           <img 
             src="https://html.tonatheme.com/2025/liggeet/assets/images/footer/footer-bg-01.jpg" 
@@ -18,8 +14,6 @@ const Footer = () => {
         </div>
 
         <div className="footer-grid-container">
-          
-          {/* Column 1: Brand Profile & Contact Details */}
           <div className="footer-column brand-summary-col">
             <div className="footer-logo-area">
               <div className="footer-logo-icon">
@@ -49,8 +43,6 @@ const Footer = () => {
 
             <a href="#branches" className="branches-link-btn">Our All Branches</a>
           </div>
-
-          {/* Column 2: Quick Links */}
           <div className="footer-column links-list-col">
             <h3 className="footer-col-title">Quick Links</h3>
             <ul className="footer-links-list">
@@ -62,7 +54,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Secondary Links */}
           <div className="footer-column links-list-col">
             <h3 className="footer-col-title">Links</h3>
             <ul className="footer-links-list">
@@ -74,7 +65,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4: Get In Touch */}
           <div className="footer-column links-list-col">
             <h3 className="footer-col-title">Get in touch</h3>
             <ul className="footer-links-list">
@@ -85,10 +75,8 @@ const Footer = () => {
               <li><a href="#give">Give to liggeet</a></li>
             </ul>
           </div>
-
         </div>
 
-        {/* Bottom Horizontal Border & Copyright Bar */}
         <div className="footer-copyright-bar">
           <div className="copyright-container">
             <p>© 2025 Liggeet. All Rights Reserved</p>

@@ -26,12 +26,10 @@ const ShowcaseGrid = () => {
         <div className="showcase-grid-container">
           {cardsData.map((card, index) => (
             <div className="showcase-card" key={index}>
-              {/* Image Box */}
               <div className="showcase-image-box">
                 <img src={card.image} alt={card.title} className="showcase-img" />
               </div>
-              
-              {/* Overlapping Bottom Content Label */}
+             
               <div className="showcase-content-label">
                 <h3 className="showcase-card-title">{card.title}</h3>
               </div>

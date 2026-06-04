@@ -10,11 +10,8 @@ const AboutOpenDay = () => {
 
   return (
     <div className="liggeet-layout-wrapper">
-      {/* 2. Main Open Day Split Content Section */}
       <section className="open-day-section">
         <div className="open-day-container">
-          
-          {/* Left Side: Overlapping Image Stack Grid */}
           <div className="image-stack-box">
             <div className="main-student-img">
               <img 
@@ -29,11 +26,7 @@ const AboutOpenDay = () => {
               />
             </div>
           </div>
-
-          {/* Right Side: Copywriting Content & Links Box */}
           <div className="open-day-content-box">
-            
-            {/* Soft pink background watermark map graphics shape */}
             <div className="watermark-map-bg">
                 <img 
                 src="https://html.tonatheme.com/2025/liggeet/assets/images/shape/map-about-bg.png"
@@ -41,7 +34,6 @@ const AboutOpenDay = () => {
             </div>
 
             <div className="content-inner-wrapper">
-              {/* Pink Accent Cap Icon */}
               <div className="accent-cap-icon">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 3L1 9L12 15L21 10.09V17H23V9L12 3Z" fill="#F06371" />
@@ -59,7 +51,6 @@ const AboutOpenDay = () => {
                 faucibus. Maecenas ultricies finibus est.
               </p>
 
-              {/* 2x2 Simple Grid Program Nav Links */}
               <div className="programs-links-grid">
                 {programLinks.map((linkText, i) => (
                   <div className="program-link-item" key={i}>
@@ -69,7 +60,6 @@ const AboutOpenDay = () => {
                 ))}
               </div>
 
-              {/* Action Button */}
               <button className="more-details-btn">More Details</button>
             </div>
           </div>

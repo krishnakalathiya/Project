@@ -33,10 +33,7 @@ const HeroCarousel = () => {
   return (
     <div className="liggeet-layout-wrapper">
 
-      {/* Main Unified Hero Section */}
       <section className="main-hero-carousel">
-        
-        {/* Background Image Container with modern architecture overlay */}
         <div className="hero-background-media">
           <img 
             src="https://html.tonatheme.com/2025/liggeet/assets/images/background/bg-image-03.jpg" 
@@ -45,15 +42,12 @@ const HeroCarousel = () => {
           />
           <div className="hero-media-overlay"></div>
         </div>
-
-        {/* Decorative Teal Swirling Arrow Loop (Top Right) */}
         <div className="hero-teal-arrow-accent">
           <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 50C20 20 50 15 65 30C80 45 60 70 40 65C25 60 30 40 55 45M55 45L48 38M55 45L48 52" stroke="#00a7ac" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"/>
           </svg>
         </div>
 
-        {/* Core Marketing Copy Layout Container */}
         <div className="hero-copy-container">
           <div className="hero-copy-inner">
             <span className="hero-copy-tagline">For A Better Future</span>
@@ -63,7 +57,6 @@ const HeroCarousel = () => {
           </div>
         </div>
 
-        {/* Slider Navigation Chevron Controls (Sides) */}
         <button className="carousel-arrow-btn arrow-left">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 19l-7-7 7-7"/></svg>
         </button>
@@ -71,7 +64,6 @@ const HeroCarousel = () => {
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 5l7 7-7 7"/></svg>
         </button>
 
-        {/* Overlapping Bottom Event Tabs Block Container */}
         <div className="hero-bottom-events-dock">
           <div className="events-dock-container">
             {eventsData.map((evt) => {
@@ -83,7 +75,6 @@ const HeroCarousel = () => {
                   onClick={() => setActiveEventId(evt.id)}
                 >
                   {isSelected ? (
-                    /* Active Expanded Display Block View */
                     <div className="expanded-card-inner">
                       <div className="expanded-date-badge">
                         <span className="expanded-day">{evt.day}</span>
@@ -101,7 +92,6 @@ const HeroCarousel = () => {
                       <a href="#find-out" className="expanded-card-link">Find out more</a>
                     </div>
                   ) : (
-                    /* Inactive Collapsed Compact View Strip */
                     <div className="collapsed-card-inner">
                       <span className="collapsed-day-number">{evt.day}</span>
                       <span className="collapsed-month-text">{evt.monthYear.split(',')[0]}</span>

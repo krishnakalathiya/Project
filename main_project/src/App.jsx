@@ -12,6 +12,8 @@ import TrustedLogos from './Pages/TrustedLogos';
 import Instagram from './Pages/InstagramFeed';
 import './App.css';
 import InstagramFeed from './Pages/InstagramFeed';
+import NewsletterBanner from './Pages/NewsletterBanner';
+import Footer from './Pages/Footer';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
       <HeroCarousel/>
       <TrustedLogos/>
       <InstagramFeed/>
+      <NewsletterBanner/>
+      <Footer/>
     </div>
   );
 }

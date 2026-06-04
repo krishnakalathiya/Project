@@ -18,7 +18,6 @@
   background-color: #ffffff;
 }
 
-/* Common Container Utility for alignment */
 .banner-container,
 .branding-container,
 .hero-content,
@@ -27,13 +26,10 @@
 .open-day-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; /* Standardizes layout gutters across rows */
+  padding: 0 20px;
   width: 100%;
 }
 
-/* ==========================================================================
-   Shared Logo Component Styles
-   ========================================================================== */
 .logo-area {
   display: flex;
   align-items: center;
@@ -67,9 +63,6 @@
   line-height: 1.1;
 }
 
-/* ==========================================================================
-   Screenshot 1 Legacy Elements (Retained for Core Layout Support)
-   ========================================================================== */
 .top-banner {
   background-color: var(--primary-pink);
   color: #ffffff;
@@ -287,7 +280,6 @@
   background-color: var(--primary-orange);
 }
 
-/* Sub-Page Mid Banner */
 .features-banner-wrapper {
   width: 100%;
   height: 340px;
@@ -301,7 +293,6 @@
   background-size: cover;
 }
 
-/* Bottom Grid Section Content */
 .grid-content-wrapper {
   position: relative;
   padding: 110px 0 130px 0;
@@ -335,7 +326,6 @@
   margin: 0;
 }
 
-/* Background Vectors Placement Rules */
 .vector-left-squiggly {
   position: absolute;
   left: -20px;
@@ -345,9 +335,6 @@
   user-select: none;
 }
 
-/* ==========================================================================
-   10. Screenshot 3 Elements: Open Day Layout Grid
-   ========================================================================== */
 .open-day-section {
   position: relative;
   width: 100%;
@@ -358,12 +345,11 @@
 
 .open-day-container {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr; /* Matches standard asymmetrical visual density layout proportions */
+  grid-template-columns: 1.05fr 0.95fr; 
   gap: 60px;
   align-items: center;
 }
 
-/* Left Stack Grid Arrangement Box */
 .image-stack-box {
   position: relative;
   width: 100%;
@@ -383,7 +369,6 @@
   object-fit: cover;
 }
 
-/* Overlapping Card Element Layout styling rules */
 .floating-group-img {
   position: absolute;
   bottom: -20px;
@@ -392,7 +377,7 @@
   height: 52%;
   border-radius: 8px;
   background: #ffffff;
-  padding: 10px; /* Produces the seamless clean white border drop framework look */
+  padding: 10px; 
   box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   z-index: 2;
@@ -405,13 +390,11 @@
   border-radius: 4px;
 }
 
-/* Right Content Box Framework Layout styling rules */
 .open-day-content-box {
   position: relative;
   width: 100%;
 }
 
-/* Subtle background map silhouette vector simulation watermark graphic */
 .watermark-map-bg {
   position: absolute;
   top: -40px;
@@ -454,7 +437,6 @@
   position: relative;
 }
 
-/* Dark layout underline block indicator matching snapshot template architecture specs */
 .section-main-heading::after {
   content: '';
   display: block;
@@ -471,7 +453,6 @@
   margin-bottom: 30px;
 }
 
-/* Programs Menu Links 2x2 Grid setup */
 .programs-links-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -486,7 +467,6 @@
   gap: 10px;
 }
 
-/* Tiny orange dash box icon bullet indicators */
 .program-link-item .bullet-arrow {
   width: 6px;
   height: 6px;
@@ -506,7 +486,6 @@
   color: var(--primary-pink);
 }
 
-/* Call to Action Button Layout specifications matching layout standard design metrics rules */
 .more-details-btn {
   background-color: var(--primary-orange);
   color: #ffffff;
@@ -526,13 +505,12 @@
 .lab-section-wrapper {
   position: relative;
   width: 100%;
-  min-height: 620px; /* Adapts cleanly to the horizontal desktop browser grid ratio */
+  min-height: 620px; 
   background-color: #ffffff;
   display: flex;
   align-items: center;
 }
 
-/* Hero Background Image Box Frame matching template dimensions */
 .lab-bg-hero-showcase {
   position: absolute;
   top: 0;
@@ -610,13 +588,10 @@
   background-color: #dc4859;
 }
 
-/* ==========================================================================
-   12. Screenshot 5 Elements: Pink Statistics Counter Section
-   ========================================================================== */
 .stats-section-wrapper {
   width: 100%;
-  background-color: var(--primary-pink); /* Utilizes your exact core pink design token token variable */
-  padding: 85px 0; /* Creates perfect vertical spatial padding symmetry above and below counters */
+  background-color: var(--primary-pink); 
+  padding: 85px 0; 
 }
 
 .stats-container {
@@ -625,7 +600,7 @@
   padding: 0 20px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Forms a pixel-perfect 4-column row layout */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 30px;
   align-items: center;
 }
@@ -636,12 +611,12 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #ffffff; /* Locks elements text layout profile to pure white */
+  color: #ffffff; 
 }
 
 .stat-number-value {
   font-size: 56px;
-  font-weight: 800; /* Extra bold text formatting weight matching snapshot hierarchy metrics */
+  font-weight: 800; 
   letter-spacing: 1px;
   line-height: 1.1;
   margin-bottom: 14px;
@@ -651,26 +626,22 @@
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.5px; /* Broad letter spacing layout signature matching template */
+  letter-spacing: 1.5px;
   opacity: 0.95;
   line-height: 1.3;
 }
 
-/* Responsive breakpoint scaling to prevent spatial crunching on mobile views */
 @media (max-width: 768px) {
   .stats-container {
-    grid-template-columns: repeat(2, 1fr); /* Drops smoothly down into a 2x2 grid framework row format */
+    grid-template-columns: repeat(2, 1fr); 
     row-gap: 50px;
   }
 }
 
-/* ==========================================================================
-   13. Screenshot 6 Elements: 4-Column Overlay Showcase Grid
-   ========================================================================== */
 .showcase-section-wrapper {
   width: 100%;
   background-color: #ffffff;
-  padding: 0 0 60px 0; /* Clear bottom margins padding layout boundaries */
+  padding: 0 0 60px 0; 
 }
 
 .showcase-grid-container {
@@ -679,21 +650,20 @@
   padding: 0 20px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Forms exact 4 equal columns across layout grid */
-  gap: 24px; /* Standardize card separation margins */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 24px; 
 }
 
 .showcase-card {
   position: relative;
   width: 100%;
-  height: 480px; /* Aligns to vertical card height geometry proportion ratios */
+  height: 480px; 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Pushes floating title overlay block to bottom edge boundary */
-  overflow: visible; /* Permits text box overlays to hang out cleanly */
+  justify-content: flex-end; 
+  overflow: visible; 
 }
 
-/* Structural Image container configuration */
 .showcase-image-box {
   position: absolute;
   top: 0;
@@ -706,26 +676,24 @@
 .showcase-img {
   width: 100%;
   height: 100%;
-  object-fit: fill; /* Stops graphic asset warping on grid compression scaling */
+  object-fit: fill; 
   transition: transform 0.4s ease;
 }
 
-/* Slight interactive graphic hover scale effect */
 .showcase-card:hover .showcase-img {
   transform: scale(1.04);
 }
 
-/* Overlapping bottom text label platform block precisely matched to template specs */
 .showcase-content-label {
   position: relative;
-  width: 86%; /* Constrains panel width inside card image borders */
+  width: 86%; 
   margin: 0 auto;
   background-color: #ffffff;
   padding: 24px 20px;
   text-align: center;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.06);
   z-index: 2;
-  border-left: 3px solid var(--primary-pink); /* Embedded pink line branding feature left track edge */
+  border-left: 3px solid var(--primary-pink);
 }
 
 .showcase-card-title {
@@ -736,23 +704,19 @@
   margin: 0;
 }
 
-/* Fluid responsive breakpoint layouts for tablet/mobile view structural security */
 @media (max-width: 992px) {
   .showcase-grid-container {
-    grid-template-columns: repeat(2, 1fr); /* Switches to an orderly 2x2 grid when view elements pinch */
+    grid-template-columns: repeat(2, 1fr); 
     row-gap: 50px;
   }
 }
 
 @media (max-width: 576px) {
   .showcase-grid-container {
-    grid-template-columns: 1fr; /* Completely normalizes to straight vertical column stacks on smartphone displays */
+    grid-template-columns: 1fr;
   }
 }
 
-/* ==========================================================================
-   14. Screenshots 7 & 8 Combined Elements: Our Studies 2x4 Grid System
-   ========================================================================== */
 .studies-section-wrapper {
   position: relative;
   width: 100%;
@@ -786,7 +750,6 @@
   margin: 0;
 }
 
-/* Centralized flat layout underline marker bar */
 .studies-main-heading::after {
   content: '';
   display: block;
@@ -796,15 +759,13 @@
   margin: 20px auto 0 auto;
 }
 
-/* Clean 4-Column Row, Multi-Row Grid Layout wrapper matching structural grid gutters */
 .studies-grid-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 horizontal blocks */
-  /* Borders serve as the clean internal separator lines between boxes */
+  grid-template-columns: repeat(4, 1fr); 
   border-top: 1px solid #f0f2f5;
 }
 
@@ -819,12 +780,10 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Erase outer right borders on every 4th item to keep grid aligned nicely */
 .study-grid-item:nth-child(4n) {
   border-right: none;
 }
 
-/* Erase first item's left border footprint to guarantee alignment with header margin paths */
 .study-grid-item:nth-child(4n+1) {
   padding-left: 20px;
 }
@@ -839,7 +798,7 @@
 }
 
 .study-grid-item:hover .study-item-title {
-  color: var(--primary-orange); /* Smooth primary brand color swap on active cards */
+  color: var(--primary-orange);
 }
 
 .study-item-description {
@@ -849,10 +808,9 @@
   margin: 0;
 }
 
-/* Desktop to multi-tier viewport adaptation fallbacks */
 @media (max-width: 992px) {
   .studies-grid-container {
-    grid-template-columns: repeat(2, 1fr); /* Drops smoothly down into pairs */
+    grid-template-columns: repeat(2, 1fr); 
   }
   .study-grid-item:nth-child(2n) {
     border-right: none;
@@ -864,7 +822,7 @@
 
 @media (max-width: 576px) {
   .studies-grid-container {
-    grid-template-columns: 1fr; /* Stack vertically cleanly */
+    grid-template-columns: 1fr; 
   }
   .study-grid-item {
     border-right: none;
@@ -872,18 +830,14 @@
   }
 }
 
-/* ==========================================================================
-   15. Screenshots 9 & 10 Combined Elements: Latest News Section
-   ========================================================================== */
 .news-section-wrapper {
   position: relative;
   width: 100%;
-  background-color: #fff6f6; /* Creates the soft off-white/pink hue layer seen in the screenshots */
+  background-color: #fff6f6; 
   padding: 80px 0 100px 0;
   overflow: hidden;
 }
 
-/* Aligns titles to the left and the mini banner action button to the right side */
 .news-section-header {
   max-width: 1200px;
   margin: 0 auto 50px auto;
@@ -913,7 +867,6 @@
   margin: 0;
 }
 
-/* Base structural bar line accent under main category text */
 .news-main-heading::after {
   content: '';
   display: block;
@@ -923,7 +876,6 @@
   margin-top: 14px;
 }
 
-/* View All News Button Component Outline Border */
 .view-all-news-btn {
   background-color: transparent;
   color: var(--primary-pink);
@@ -942,7 +894,6 @@
   border-color: var(--primary-pink);
 }
 
-/* Three-Column Grid Content Wrapper Frame */
 .news-grid-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -953,10 +904,9 @@
   gap: 30px;
 }
 
-/* Individual Content Cards Card Layer */
 .news-card-item {
   background-color: #ffffff;
-  border-radius: 16px; /* Produces the soft rounded image look shown in screenshots */
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.02);
   display: flex;
@@ -964,7 +914,6 @@
   padding: 0 0 35px 0;
 }
 
-/* Restrains the card thumbnail image */
 .news-image-frame {
   width: 100%;
   height: 250px;
@@ -982,7 +931,6 @@
   transform: scale(1.03);
 }
 
-/* Meta Data Context Row Rules */
 .news-card-meta-bar {
   padding: 24px 30px 12px 30px;
   display: flex;
@@ -997,7 +945,6 @@
   font-weight: 500;
 }
 
-/* Subtle typography alignment spaces matching standard text themes */
 .meta-author {
   padding-left: 0;
 }
@@ -1030,7 +977,6 @@
   margin: 0;
 }
 
-/* Decorative Accent Element Mappings */
 .news-top-heart-accent {
   position: absolute;
   top: 40px;
@@ -1041,11 +987,9 @@
   transform: rotate(-15deg);
 }
 
-
-/* Tablet and Smartphone Flow Breakpoint Resets */
 @media (max-width: 992px) {
   .news-grid-container {
-    grid-template-columns: 1fr; /* Transforms cards into clean stacked blocks on narrower windows */
+    grid-template-columns: 1fr; 
     gap: 40px;
   }
   .news-section-header {
@@ -1055,24 +999,20 @@
   }
 }
 
-/* ==========================================================================
-   16. Screenshots 11 & 12 Elements: Hero Slide & Overlapping Event Tabs
-   ========================================================================== */
 .main-hero-carousel {
   position: relative;
   width: 100%;
-  height: 720px; /* Expands heights parameters to hold both copy and bottom tabs safely */
+  height: 720px; 
   background-color: var(--dark-blue);
   overflow: hidden;
 }
 
-/* Absolute Media Element Box Layer */
 .hero-background-media {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 90%; /* Pushes background line up slightly matching bottom white container track */
+  height: 90%; 
   z-index: 1;
 }
 
@@ -1091,7 +1031,6 @@
   background: linear-gradient(to bottom, rgba(12, 34, 56, 0.45), rgba(12, 34, 56, 0.3));
 }
 
-/* Center Column Structural Gutter Alignment Container */
 .hero-copy-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1120,7 +1059,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Dual line underline style match seen in the first screenshot */
 .hero-copy-tagline::after {
   content: '';
   position: absolute;
@@ -1130,7 +1068,7 @@
   height: 4px;
   background-color: #ffffff;
   border-radius: 50%;
-  box-shadow: 0px 3px 0px var(--primary-orange); /* Double line trace effect */
+  box-shadow: 0px 3px 0px var(--primary-orange); 
 }
 
 .hero-copy-title {
@@ -1142,7 +1080,6 @@
   margin: 0;
 }
 
-/* Slider Left/Right Chevron Component Layout Specs */
 .carousel-arrow-btn {
   position: absolute;
   top: 42%;
@@ -1164,7 +1101,6 @@
 .arrow-left { left: 40px; }
 .arrow-right { right: 40px; }
 
-/* Teal Vector Loop Element Placement */
 .hero-teal-arrow-accent {
   position: absolute;
   top: 70px;
@@ -1175,9 +1111,6 @@
   z-index: 2;
 }
 
-/* ==========================================================================
-   Bottom Positioned Event Dock Tabs (Screenshot 12 Blueprint Architecture)
-   ========================================================================== */
 .hero-bottom-events-dock {
   position: absolute;
   bottom: 0;
@@ -1192,16 +1125,14 @@
   padding: 0 20px;
   width: 100%;
   display: flex;
-  align-items: flex-end; /* Locks elements flush along the base layout timeline line */
+  align-items: flex-end; 
 }
 
-/* Base Dynamic Card Frame Container */
 .event-dock-tab-card {
   cursor: pointer;
   transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Active Expanded State: Bright Pink Feature Block Container */
 .event-dock-tab-card.is-expanded {
   width: 320px;
   background-color: var(--primary-pink);
@@ -1211,7 +1142,6 @@
   position: relative;
 }
 
-/* Tiny bottom triangle indicator pointing downward on expanded white row */
 .event-dock-tab-card.is-expanded::after {
   content: '';
   position: absolute;
@@ -1261,7 +1191,6 @@
   margin-bottom: 10px;
 }
 
-/* Subtle dot representations placeholder for time/location icons */
 .meta-time-icon, .meta-loc-icon {
   width: 5px;
   height: 5px;
@@ -1278,17 +1207,16 @@
   display: inline-block;
 }
 
-/* Inactive Collapsed Strip Style Layout Rules */
 .event-dock-tab-card.is-collapsed {
-  flex: 1; /* Automatically spreads remaining empty row slots across layout */
-  background-color: rgba(12, 34, 56, 0.85); /* Semitransparent slate strip container look */
+  flex: 1; 
+  background-color: rgba(12, 34, 56, 0.85); 
   backdrop-filter: blur(5px);
   padding: 30px 40px;
   display: flex;
   align-items: center;
   color: #ffffff;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
-  height: 95px; /* Fixed profile to sit lower than bright pink highlighted component */
+  height: 95px; 
 }
 
 .event-dock-tab-card.is-collapsed:hover {
@@ -1312,7 +1240,6 @@
   opacity: 0.8;
 }
 
-/* Viewport Adjustments for Tablet Scalings */
 @media (max-width: 768px) {
   .hero-copy-title { font-size: 38px; }
   .events-dock-container { flex-direction: column; align-items: stretch; }
@@ -1321,14 +1248,11 @@
   .main-hero-carousel { height: auto; min-height: 600px; }
 }
 
-/* ==========================================================================
-   17. Screenshot 13 Elements: Trusted By 1k+ Companies Logo Grid
-   ========================================================================== */
 .trusted-partners-section {
   position: relative;
   width: 100%;
   background-color: #ffffff;
-  padding: 100px 0 110px 0; /* Creates wide vertical padding layouts seen in the showcase track */
+  padding: 100px 0 110px 0; 
   overflow: hidden;
 }
 
@@ -1339,7 +1263,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Horizontally groups title text and row layouts to exact center */
+  align-items: center; 
 }
 
 .partners-heading {
@@ -1348,22 +1272,21 @@
   font-weight: 700;
   letter-spacing: 0.5px;
   text-align: center;
-  margin-bottom: 60px; /* Separates heading cleanly from the corporate logos track below */
+  margin-bottom: 60px; 
 }
 
-/* 5-Column Symmetrical Grid Alignment Row for Client Logos */
 .partners-logos-row {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  opacity: 0.5; /* Yields that soft, modern corporate greyscale silhouette layout styling */
+  opacity: 0.5; 
   transition: opacity 0.3s ease;
 }
 
 .partners-logos-row:hover {
-  opacity: 0.75; /* Smooth activation glow when interacting over logo block track */
+  opacity: 0.75; 
 }
 
 .partner-logo-item {
@@ -1374,7 +1297,6 @@
   user-select: none;
 }
 
-/* Individual Brand Silhouette Type Forms precisely styled to look identical to screenshot models */
 .partner-brand-logo-ui {
   display: flex;
   flex-direction: column;
@@ -1438,11 +1360,10 @@
   pointer-events: none;
 }
 
-/* Fluid Viewport adjustments to prevent partner tags from spilling off portable displays */
 @media (max-width: 992px) {
   .partners-logos-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Splits into a cleanly distributed 3-wide map layer */
+    grid-template-columns: repeat(3, 1fr); 
     row-gap: 40px;
   }
 }
@@ -1452,13 +1373,10 @@
     font-size: 24px;
   }
   .partners-logos-row {
-    grid-template-columns: repeat(2, 1fr); /* Shrinks layout cleanly to simple pairs on phone tracking widths */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
-/* ==========================================================================
-   18. Screenshots 14 & 15 Combined Elements: Instagram Grid Layout
-   ========================================================================== */
 .instagram-section-wrapper {
   position: relative;
   width: 100%;
@@ -1492,7 +1410,6 @@
   margin: 0;
 }
 
-/* Central layout block line decoration beneath username heading text */
 .instagram-main-heading::after {
   content: '';
   display: block;
@@ -1502,21 +1419,20 @@
   margin: 18px auto 0 auto;
 }
 
-/* Symmetrical 4-Column Grid System spanning full wrapper content bounds */
 .instagram-grid-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 identical square slots across */
-  gap: 24px; /* Standard separation margins between frame blocks */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 24px; 
 }
 
 .instagram-grid-item {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1; /* Locks photo frame blocks to perfect squares regardless of window scale */
+  aspect-ratio: 1 / 1; 
 }
 
 .instagram-image-frame {
@@ -1530,18 +1446,17 @@
 .instagram-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Prevents texturing distortions on cell scaling */
+  object-fit: cover; 
   transition: transform 0.4s ease;
 }
 
-/* Smooth social link interactive hover mask element */
 .instagram-hover-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(12, 34, 56, 0.4); /* Dark translucent brand blend veil */
+  background: rgba(12, 34, 56, 0.4); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1570,12 +1485,9 @@
   transform: scale(1.05);
 }
 
-
-
-/* Adaptive media query limits for small display devices */
 @media (max-width: 992px) {
   .instagram-grid-container {
-    grid-template-columns: repeat(2, 1fr); /* Collapses down cleanly into 2 columns on tablets */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 16px;
   }
   .instagram-main-heading {
@@ -1585,6 +1497,343 @@
 
 @media (max-width: 480px) {
   .instagram-grid-container {
-    grid-template-columns: 1fr; /* Complete single-column vertical track on modern touch devices */
+    grid-template-columns: 1fr; 
+  }
+}
+
+/* ==========================================================================
+   19. Screenshot 16 Elements: Newsletter Subscription Banner
+   ========================================================================== */
+.newsletter-section-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: var(--primary-pink); /* Uses your core pink design variable */
+  padding: 100px 0; /* Creates symmetrical vertical layout spacing */
+  overflow: hidden;
+}
+
+.newsletter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.newsletter-heading {
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+/* Combined Form Row Alignment Container */
+.newsletter-form {
+  display: flex;
+  width: 100%;
+  max-width: 680px; /* Constrains field tracking bounds cleanly */
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.newsletter-input {
+  flex: 1;
+  background-color: #ffffff;
+  border: none;
+  padding: 22px 30px;
+  font-size: 15px;
+  color: var(--dark-blue);
+  outline: none;
+}
+
+.newsletter-input::placeholder {
+  color: #a5b1c2; /* Soft muted structural fallback color for text inputs */
+}
+
+/* Dark Slate submission button precise template specs match */
+.newsletter-btn {
+  background-color: #1a3146; /* Pure dark slate configuration layout signature */
+  color: #ffffff;
+  border: none;
+  padding: 22px 36px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.newsletter-btn:hover {
+  background-color: var(--dark-blue);
+}
+
+/* Background Abstract Vector Positioning Rules */
+.newsletter-vector-left {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%) rotate(15deg);
+  width: 150px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.newsletter-vector-right {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%) scaleX(-1) rotate(15deg); /* Mirrors layout symmetry across the track container */
+  width: 150px;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Viewport adaptation properties for smaller touch windows */
+@media (max-width: 768px) {
+  .newsletter-heading {
+    font-size: 24px;
+    br { display: none; } /* Normalizes flow wrap paths on tight width grids */
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: none;
+  }
+  
+  .newsletter-input {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .newsletter-btn {
+    width: 100%;
+    border-radius: 4px;
+    padding: 18px;
+  }
+}
+
+/* ==========================================================================
+   20. Screenshot 17 Elements: Main Site Footer Layout Section
+   ========================================================================== */
+.main-site-footer {
+  position: relative;
+  width: 100%;
+  background-color: #232d3b; /* Fallback solid slate dark background layer */
+  padding: 90px 0 0 0; /* Keeps zero padding bottom to allow copyright bar flush layout */
+  overflow: hidden;
+}
+
+/* Background image texture rules */
+.footer-bg-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.footer-img-layer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.12; /* Dark ambient blending layout constraint matching screenshot depth */
+}
+
+.footer-dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #1c2430 0%, #0f151d 100%);
+  opacity: 0.88;
+}
+
+/* Symmetrical 4-Column Responsive Layout Grid Container */
+.footer-grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 70px 20px; /* Generates wide spacing track separator block above copyright line */
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr; /* Asymmetric column density logic to map spacing */
+  gap: 50px;
+  z-index: 2;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* White Variation Footer Logo Layout specs */
+.footer-logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.footer-logo-icon svg {
+  width: 45px;
+  height: 45px;
+}
+
+.footer-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo-text .f-sub-title {
+  font-size: 14px;
+  color: var(--primary-orange);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.footer-logo-text .f-main-title {
+  font-size: 28px;
+  color: #ffffff; /* pure white contrast adjustment */
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+.footer-intro-text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #adb5bd; /* Soft light-slate text color for ambient dark backgrounds */
+  margin-bottom: 30px;
+}
+
+/* Contact Block Formations */
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.location-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+}
+
+.location-line-dash {
+  color: white;
+  font-weight: bold;
+}
+
+.location-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.address-text,
+.phone-text {
+  font-size: 15px;
+  color: #adb5bd;
+  line-height: 1.5;
+}
+
+.phone-text a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Highlight Orange Text Links */
+.branches-link-btn {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary-orange);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.branches-link-btn:hover {
+  color: #ffffff;
+}
+
+/* Right Side Multi-Link Column Typography rules */
+.footer-col-title {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 30px;
+  margin-top: 10px; /* Aligns visually with logo text center points */
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-links-list li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #adb5bd;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-links-list li a:hover {
+  color: #ffffff;
+  padding-left: 4px; /* Soft micro-interaction shift on list item select */
+}
+
+/* ==========================================================================
+   Bottom Horizontal Copyright Bar Layer
+   ========================================================================== */
+.footer-copyright-bar {
+  width: 100%;
+  border-top: 1px solid rgba(235, 221, 221, 0.06); /* Highly muted row divider boundary line */
+  padding: 30px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.copyright-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.footer-copyright-bar p {
+  font-size: 14px;
+  color: #868e96;
+}
+
+/* Responsive constraints handling layout drop flow scales */
+@media (max-width: 992px) {
+  .footer-grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Splits into pairs comfortably on tablet footprints */
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-grid-container {
+    grid-template-columns: 1fr; /* Compresses cleanly into a single vertical link block stack on phones */
+    gap: 35px;
+  }
+  .footer-col-title {
+    margin-bottom: 15px;
+    margin-top: 5px;
   }
 }

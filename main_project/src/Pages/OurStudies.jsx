@@ -14,17 +14,12 @@ const OurStudies = () => {
 
   return (
     <div className="liggeet-layout-wrapper">
-
-      {/* Main Studies Wrapper Section */}
       <section className="studies-section-wrapper">
-        
-        {/* Section Header */}
         <div className="studies-section-header">
           <span className="studies-tagline">Student studies</span>
           <h2 className="studies-main-heading">Our Studies</h2>
         </div>
-
-        {/* 2x4 Integrated Grid Container */}
+        
         <div className="studies-grid-container">
           {studiesData.map((study, index) => (
             <div className="study-grid-item" key={index}>

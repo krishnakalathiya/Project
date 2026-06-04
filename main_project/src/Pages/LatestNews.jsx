@@ -28,20 +28,14 @@ const LatestNews = () => {
   return (
     <div className="liggeet-layout-wrapper">
 
-      {/* Main Latest News Section */}
       <section className="news-section-wrapper">
-        
-        {/* Soft Pink Background Tint applied across the entire component block */}
         <div className="news-bg-tint-layer"></div>
-
-        {/* Decorative Top Right Heart Shape Vector */}
         <div className="news-top-heart-accent">
           <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M25 43C25 43 5 30 5 16.5C5 9.5 10.5 4 17.5 4C21.5 4 24 6.5 25 8.5C26 6.5 28.5 4 32.5 4C39.5 4 45 9.5 45 16.5C45 30 25 43 25 43Z" stroke="#ff526c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.3"/>
           </svg>
         </div>
 
-        {/* Structural Section Header Area */}
         <div className="news-section-header">
           <div className="header-left-titles">
             <span className="news-tagline">News & Blogs</span>
@@ -52,22 +46,16 @@ const LatestNews = () => {
           </div>
         </div>
 
-        {/* 3-Column Cards Grid System */}
         <div className="news-grid-container">
           {newsData.map((news, index) => (
             <div className="news-card-item" key={index}>
-              {/* Card Thumbnail Image */}
               <div className="news-image-frame">
                 <img src={news.image} alt={news.title} className="news-card-img" />
               </div>
-
-              {/* Card Meta Details Bar */}
               <div className="news-card-meta-bar">
                 <span className="meta-author">{news.author}</span>
                 <span className="meta-date">{news.date}</span>
               </div>
-
-              {/* Card Typography Content Body */}
               <div className="news-card-body">
                 <h3 className="news-card-title">{news.title}</h3>
                 <p className="news-card-description">{news.desc}</p>
@@ -75,9 +63,6 @@ const LatestNews = () => {
             </div>
           ))}
         </div>
-
-        {/* Decorative Wireframe Ring (Bottom Right) */}
-        <div className="news-corner-accent-ring"></div>
       </section>
 
     </div>

@@ -5,12 +5,13 @@ const Footer = () => {
     <div className="liggeet-layout-wrapper">
       <footer className="main-site-footer">
         <div className="footer-bg-media">
-          <img 
+          <div className="footer-dark-overlay">
+             <img 
             src="https://html.tonatheme.com/2025/liggeet/assets/images/footer/footer-bg-01.jpg" 
             alt="University Interior/Library blur overlay" 
             className="footer-img-layer"
           />
-          <div className="footer-dark-overlay"></div>
+          </div>
         </div>
 
         <div className="footer-grid-container">

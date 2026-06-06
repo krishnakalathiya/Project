@@ -28,9 +28,6 @@ const AboutOpenDay = () => {
           </div>
           <div className="open-day-content-box">
             <div className="watermark-map-bg">
-                <img 
-                src="https://html.tonatheme.com/2025/liggeet/assets/images/shape/map-about-bg.png"
-              />
             </div>
 
             <div className="content-inner-wrapper">

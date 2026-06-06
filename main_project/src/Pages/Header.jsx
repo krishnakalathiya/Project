@@ -1,6 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
+// 1. Import Redux dispatch hooks to communicate with the store
+import { useDispatch } from 'react-redux';
+import { navigateTo } from '../store/navSlice';
 
-const Header = () => {
+const Header = ({ onLoginClick }) => {
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  
+  // 2. Initialize the dispatch function wrapper
+  const dispatch = useDispatch();
+
+  const menuItems = {
+    academics: [
+      { label: "Academics 01", href: "#Academics 01" },
+      { label: "Academics 02", href: "#Academics 02" },
+      { label: "Programs", href: "#Programs" },
+      { label: "Major Programs", href: "#Major Programs" }
+    ],
+    admissions: [
+      { label: "Graduate Admission", href: "#Graduate Admission" },
+      { label: "Undergraduate Admission", href: "#Undergraduate Admission" },
+      { label: "Careers", href: "#Carres" },
+      { label: "Carrer Details", href: "#Carrer Details" }
+    ],
+    pages: [
+      { label: "About", href: "#about" },
+      { label: "Faq", href: "#faq" },
+      { label: "Events", href: "#Events" },
+      { label: "Events sidebar", href: "#event sidebar" },
+      { label: "Events Details", href: "#event Details" },
+      { label: "Request Info", href: "#Request Info" },
+      { label: "Campus Life", href: "#campus life" }
+    ],
+    blog: [
+      { label: "Blog", href: "#blog" },
+      { label: "Blog Details", href: "#blog details" },
+      { label: "Blog Listing", href: "#blog listing" }
+    ]
+  };
+
   return (
     <header className="liggeet-header">
       <div className="top-banner">
@@ -9,7 +46,17 @@ const Header = () => {
           <div className="banner-links">
             <a href="#faqs">Faqs</a>
             <span className="separator">|</span>
-            <a href="#login-register">Login / Register</a>
+            
+            <a 
+              href="#login" 
+              onClick={(e) => {
+                e.preventDefault(); 
+                if (onLoginClick) onLoginClick();
+              }}
+            >
+              Login / Register
+            </a>
+
           </div>
         </div>
       </div>
@@ -45,23 +92,76 @@ const Header = () => {
       <div className="hero-wrapper">
         <nav className="nav-bar">
           <ul className="nav-links">
-            <li className="active"><a href="#home">Home</a></li>
-            <li><a href="#academics">Academics</a></li>
-            <li><a href="#admissions">Admissions</a></li>
-            <li><a href="#pages">Pages</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li className="nav-item active"><a href="#home">Home</a></li>
+
+            {/* 3. ATTACHED ONCLICK HERE TO DISPATCH THE ACADEMICS VIEW ROUTE CHANGE */}
+            <li 
+              className="nav-item has-dropdown"
+              onMouseEnter={() => setActiveDropdown('academics')}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <button 
+                className="nav-btn"
+                onClick={() => dispatch(navigateTo('academics'))}
+              >
+                Academics
+              </button>
+              <ul className={`dropdown-menu ${activeDropdown === 'academics' ? 'show' : ''}`}>
+                {menuItems.academics.map((item, index) => (
+                  <li key={index}><a href={item.href}>{item.label}</a></li>
+                ))}
+              </ul>
+            </li>
+
+            <li 
+              className="nav-item has-dropdown"
+              onMouseEnter={() => setActiveDropdown('admissions')}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <button className="nav-btn">Admissions</button>
+              <ul className={`dropdown-menu ${activeDropdown === 'admissions' ? 'show' : ''}`}>
+                {menuItems.admissions.map((item, index) => (
+                  <li key={index}><a href={item.href}>{item.label}</a></li>
+                ))}
+              </ul>
+            </li>
+
+            <li 
+              className="nav-item has-dropdown"
+              onMouseEnter={() => setActiveDropdown('pages')}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <button className="nav-btn">Pages</button>
+              <ul className={`dropdown-menu ${activeDropdown === 'pages' ? 'show' : ''}`}>
+                {menuItems.pages.map((item, index) => (
+                  <li key={index}><a href={item.href}>{item.label}</a></li>
+                ))}
+              </ul>
+            </li>
+
+            <li 
+              className="nav-item has-dropdown"
+              onMouseEnter={() => setActiveDropdown('blog')}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <button className="nav-btn">Blog</button>
+              <ul className={`dropdown-menu ${activeDropdown === 'blog' ? 'show' : ''}`}>
+                {menuItems.blog.map((item, index) => (
+                  <li key={index}><a href={item.href}>{item.label}</a></li>
+                ))}
+              </ul>
+            </li>
+
+            <li className="nav-item"><a href="#contact">Contact</a></li>
           </ul>
+          
           <button className="cta-btn">Free Join Us</button>
         </nav>
 
-        {/* Hero Content Section */}
         <div className="hero-content">
           <div className="hero-text-container">
             <span className="hero-tagline">For A Better Future</span>
-            <h1 className="hero-title">
-              TO LEARN ABOUT<br />THE WORLD
-            </h1>
+            <h1 className="hero-title">TO LEARN ABOUT<br />THE WORLD</h1>
           </div>
         </div>
       </div>

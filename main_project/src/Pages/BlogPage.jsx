@@ -32,7 +32,6 @@ const BlogPage = () => {
     ]
   };
 
-  // Structured data array containing all 7 distinct articles shown across your screenshots
   const blogArticles = [
     {
       id: 1,
@@ -187,7 +186,7 @@ const BlogPage = () => {
         </div>
       </div>
 
-      {/* 3. White Minimal Breadcrumb Header Canvas (Screenshot 1 Match) */}
+      {/* 3. White Minimal Breadcrumb Header Canvas */}
       <section className="blog-title-canvas-viewport">
         <div className="blog-container-fluid path-and-title-box">
           <div className="blog-breadcrumb-path">
@@ -202,7 +201,7 @@ const BlogPage = () => {
       </section>
 
       {/* ==========================================================================
-         4. CORE TWO-COLUMN FLUID CARD GRID VIEWPORT (Screenshots 2 to 6 Match)
+         4. CORE TWO-COLUMN FLUID CARD GRID VIEWPORT
          ========================================================================== */}
       <main className="blog-grid-workspace-section">
         <div className="blog-container-fluid articles-asymmetrical-grid">

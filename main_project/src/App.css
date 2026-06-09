@@ -1771,14 +1771,11 @@
   }
 }
 
-/* ==========================================================================
-   19. Screenshot 16 Elements: Newsletter Subscription Banner
-   ========================================================================== */
 .newsletter-section-wrapper {
   position: relative;
   width: 100%;
-  background-color: var(--primary-pink); /* Uses your core pink design variable */
-  padding: 100px 0; /* Creates symmetrical vertical layout spacing */
+  background-color: var(--primary-pink); 
+  padding: 100px 0; 
   overflow: hidden;
 }
 
@@ -2545,7 +2542,6 @@
   font-family: inherit;
 }
 
-/* Underline tracker line matching screenshots layout context explicitly */
 .reg-nav-item.active::after {
   content: '';
   position: absolute;
@@ -2618,9 +2614,6 @@
 
 .header-search-btn svg { width: 16px; height: 16px; }
 
-/* ==========================================================================
-   3. Chess Hero Banner (Screenshot 1 Blueprint)
-   ========================================================================== */
 .reg-hero-banner {
   position: relative;
   width: 100%;
@@ -2965,18 +2958,15 @@
   .acad-hero-title { font-size: 38px; }
 }
 
-/* ==========================================================================
-   Academics Page Addition: About Split-Grid Content Section
-   ========================================================================== */
 .about-liggeet-split-section {
   width: 100%;
-  background-color: #fff4f4; /* Soft pink layout fill matching your screenshot */
+  background-color: #fff4f4; 
   padding: 100px 0;
 }
 
 .split-grid-layout {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr; /* Precise scaling proportions for text and picture boxes */
+  grid-template-columns: 1.1fr 0.9fr; 
   gap: 50px;
   align-items: center;
 }
@@ -3237,15 +3227,14 @@
   position: relative;
 }
 
-/* Produces the clean wireframe right-hand border rules seen in your screenshot */
 .department-grid-card:not(:last-child) {
   border-right: 1px solid #eaeaea;
 }
 
 .dept-card-title {
-  font-size: 32px; /* Large statement heading font matching template layout */
+  font-size: 32px; 
   font-weight: 700;
-  color: #1a2238; /* Muted corporate slate dark blue color */
+  color: #1a2238; 
   margin: 0;
   letter-spacing: -0.5px;
   cursor: pointer;
@@ -3405,7 +3394,6 @@
   color: var(--primary-orange);
 }
 
-/* Underline horizontal navigation route highlighting trace bar matches screenshot context */
 .careers-nav-item.active::after {
   content: '';
   position: absolute;
@@ -3478,9 +3466,6 @@
 
 .header-search-btn svg { width: 16px; height: 16px; }
 
-/* ==========================================================================
-   3. White Minimal Layout Title Canvas Block (Screenshot Match)
-   ========================================================================== */
 .careers-title-canvas-viewport {
   width: 100%;
   background-color: #ffffff;
@@ -3513,16 +3498,15 @@
 }
 
 .crumb-arrow-separator {
-  color: #ff526c; /* Accurate red/pink color token path separator matching screenshot */
+  color: #ff526c; 
   font-weight: bold;
 }
 
 .crumb-active-page {
-  color: #ff526c; /* Active target matching track routing link precisely */
+  color: #ff526c; 
   font-weight: bold;
 }
 
-/* Centered content node definitions */
 .careers-centered-title-node {
   width: 100%;
   text-align: center;
@@ -4101,11 +4085,10 @@
   border-color: #e2eaf0;
 }
 
-/* Left Accent Square thumbnail geometry layer matching screenshots placeholder */
 .job-card-visual-block-thumb {
   width: 74px;
   height: 74px;
-  background-color: #cbf3f5; /* Light soft cyan thumbnail box tint match */
+  background-color: #cbf3f5; 
   border-radius: 4px;
 }
 
@@ -4543,17 +4526,16 @@
 }
 
 .icon-plus-shape {
-  color: #00a7ac; /* Cyan/Teal plus token color matching screenshot exactly */
+  color: #00a7ac; 
   font-weight: bold;
 }
 
 .icon-minus-shape {
-  color: #00a7ac; /* Cyan/Teal minus tracking state token matching layout exactly */
+  color: #00a7ac; 
   font-weight: bold;
   font-size: 16px;
 }
 
-/* Smooth Collapse CSS Animation Engine */
 .faq-item-collapsible-content {
   max-height: 0;
   overflow: hidden;
@@ -4869,11 +4851,10 @@
   background-color: #ffffff;
 }
 
-/* Rounded Corner Image Crop Mask Container */
 .blog-card-image-wrapper {
   width: 100%;
-  height: 380px; /* Precise height ratio matching the presentation screenshots */
-  border-radius: 16px; /* Smooth card rounded contours exactly as seen in image card files */
+  height: 380px; 
+  border-radius: 16px; 
   overflow: hidden;
   margin-bottom: 24px;
   background-color: #f7f9fa;
@@ -5170,9 +5151,6 @@
   margin: 0;
 }
 
-/* ==========================================================================
-   4. Google Maps Iframe Section Map Interface
-   ========================================================================== */
 .contact-map-embed-section {
   width: 100%;
   position: relative;
@@ -5186,7 +5164,6 @@
   position: relative;
 }
 
-/* Floating Left Target Placement Card overlay matching map screenshots layout */
 .map-floating-pin-overlay-card {
   position: absolute;
   left: 40px;
@@ -5226,21 +5203,18 @@
 .rating-star-vector { color: #f29924; font-size: 14px; }
 .rating-reviews-count-link { color: #437ef7; cursor: pointer; text-decoration: underline; }
 
-/* ==========================================================================
-   5. Floating Info Cards Overlapping Column Grid Row (Screenshot 3 Match)
-   ========================================================================== */
 .contact-info-cards-section-wrapper {
   width: 100%;
   background-color: #ffffff;
   padding: 60px 0;
   position: relative;
-  margin-top: -40px; /* Offset pull makes elements layer neatly directly above the map track viewport */
+  margin-top: -40px; 
   z-index: 20;
 }
 
 .floating-cards-flex-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Forms 3 equal distinct info panel buckets */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 30px;
 }
 

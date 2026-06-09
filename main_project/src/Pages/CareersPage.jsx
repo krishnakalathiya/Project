@@ -73,7 +73,6 @@ const CareersPage = () => {
     }
   ];
 
-  // Data modeling the actual job list data stream out out from your screenshots
   const jobPositions = [
     {
       role: "Clinical Research Manager",
@@ -294,7 +293,7 @@ const CareersPage = () => {
       </section>
 
       {/* ==========================================================================
-         7. NEW TEMPORARY WORK JOB OPPORTUNITIES LIST (Latest Screenshots Match)
+         7. NEW TEMPORARY WORK JOB OPPORTUNITIES LIST
          ========================================================================== */}
       <section className="careers-jobs-list-section">
         <div className="careers-container-fluid">

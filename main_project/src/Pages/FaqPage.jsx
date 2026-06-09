@@ -6,14 +6,12 @@ const FaqPage = () => {
   const dispatch = useDispatch();
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
-  
-  // Track open states for accordions independently by using unique state IDs
   const [openFaqs, setOpenFaqs] = useState({
-    left_0: true,  // Default "Undergraduate Admissions" open as seen in screenshot
+    left_0: true,  
     left_1: false,
     left_2: false,
     left_3: false,
-    right_0: true, // Default "How to turn visitors into contributors" open as seen in screenshot
+    right_0: true, 
     right_1: false,
     right_2: false,
     right_3: false,
@@ -160,7 +158,7 @@ const FaqPage = () => {
         </div>
       </div>
 
-      {/* 3. White Minimal Layout Title Canvas Block (Screenshot 1 Match) */}
+      {/* 3. White Minimal Layout Title Canvas Block */}
       <section className="faq-title-canvas-viewport">
         <div className="faq-container-fluid path-and-title-box">
           <div className="faq-breadcrumb-path">
@@ -175,7 +173,7 @@ const FaqPage = () => {
       </section>
 
       {/* ==========================================================================
-         4. CORE FAQ INTERACTIVE ACCORDION ROW GRID (Screenshots 2 & 3 Match)
+         4. CORE FAQ INTERACTIVE ACCORDION ROW GRID 
          ========================================================================== */}
       <section className="faq-accordion-grid-section">
         <div className="faq-container-fluid">

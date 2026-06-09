@@ -17,6 +17,10 @@ import NewsletterBanner from './Pages/NewsletterBanner';
 import LoginHeader from './Pages/login';
 import RegisterPage from './Pages/RegisterPage';
 import AcademicsPage from './Pages/AcademicsPage';
+import CareersPage from './Pages/CareersPage';
+import FaqPage from './Pages/FaqPage';
+import BlogPage from './Pages/BlogPage';
+import ContactPage from './Pages/ContactPage';
 import Footer from './Pages/Footer';
 import './App.css';
 
@@ -72,6 +76,34 @@ function App() {
           <Footer />
         </div>
       )}
+
+      {currentPage === 'careers' && (
+        <div className="careers-page-view">
+          <CareersPage />
+          <Footer />
+        </div>
+      )}
+
+      {currentPage === 'faq' && (
+        <div className="faq-page-view">
+          <FaqPage />
+          <Footer />
+        </div>
+      )}
+
+      {currentPage === 'blog' && (
+        <div className="blog-page-view">
+          <BlogPage />
+          <Footer />
+        </div>
+      )}
+
+      {currentPage === 'contact' && (
+      <div className="contact-page-view">
+          <ContactPage />
+          <Footer />
+      </div>
+)}
     </div>
   );
 }

@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-// 1. Import Redux dispatch hooks to communicate with the store
-import { useDispatch } from 'react-redux';
+// Import Redux dispatch and selector hooks to communicate with the store
+import { useDispatch, useSelector } from 'react-redux';
 import { navigateTo } from '../store/navSlice';
 
 const Header = ({ onLoginClick }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   
-  // 2. Initialize the dispatch function wrapper
+  // Initialize the dispatch function wrapper
   const dispatch = useDispatch();
+
+  // Extract the current navigation path state dynamically to toggle underlying active classes
+  const currentPage = useSelector((state) => state.navigation.currentPage);
 
   const menuItems = {
     academics: [
@@ -92,11 +95,13 @@ const Header = ({ onLoginClick }) => {
       <div className="hero-wrapper">
         <nav className="nav-bar">
           <ul className="nav-links">
-            <li className="nav-item active"><a href="#home">Home</a></li>
+            <li className={`nav-item ${currentPage === 'home' ? 'active' : ''}`}>
+              <a href="#home" onClick={(e) => { e.preventDefault(); dispatch(navigateTo('home')); }}>Home</a>
+            </li>
 
-            {/* 3. ATTACHED ONCLICK HERE TO DISPATCH THE ACADEMICS VIEW ROUTE CHANGE */}
+            {/* Academics Navigation Button */}
             <li 
-              className="nav-item has-dropdown"
+              className={`nav-item has-dropdown ${currentPage === 'academics' ? 'active' : ''}`}
               onMouseEnter={() => setActiveDropdown('academics')}
               onMouseLeave={() => setActiveDropdown(null)}
             >
@@ -113,12 +118,18 @@ const Header = ({ onLoginClick }) => {
               </ul>
             </li>
 
+            {/* Admissions Navigation Button */}
             <li 
-              className="nav-item has-dropdown"
+              className={`nav-item has-dropdown ${currentPage === 'careers' ? 'active' : ''}`}
               onMouseEnter={() => setActiveDropdown('admissions')}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="nav-btn">Admissions</button>
+              <button 
+                className="nav-btn"
+                onClick={() => dispatch(navigateTo('careers'))}
+              >
+                Admissions
+              </button>
               <ul className={`dropdown-menu ${activeDropdown === 'admissions' ? 'show' : ''}`}>
                 {menuItems.admissions.map((item, index) => (
                   <li key={index}><a href={item.href}>{item.label}</a></li>
@@ -126,33 +137,80 @@ const Header = ({ onLoginClick }) => {
               </ul>
             </li>
 
+            {/* Pages Navigation Button */}
             <li 
-              className="nav-item has-dropdown"
+              className={`nav-item has-dropdown ${currentPage === 'faq' ? 'active' : ''}`}
               onMouseEnter={() => setActiveDropdown('pages')}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="nav-btn">Pages</button>
+              <button 
+                className="nav-btn"
+                onClick={() => dispatch(navigateTo('faq'))}
+              >
+                Pages
+              </button>
               <ul className={`dropdown-menu ${activeDropdown === 'pages' ? 'show' : ''}`}>
                 {menuItems.pages.map((item, index) => (
-                  <li key={index}><a href={item.href}>{item.label}</a></li>
+                  <li key={index}>
+                    <a 
+                      href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (item.label === "Faq") {
+                          dispatch(navigateTo('faq'));
+                        } else {
+                          console.log(`Navigating to fallback layout content path: ${item.label}`);
+                        }
+                      }}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
                 ))}
               </ul>
             </li>
 
+            {/* Blog Navigation Button — Linked to dynamically render the new BlogPage file view */}
             <li 
-              className="nav-item has-dropdown"
+              className={`nav-item has-dropdown ${currentPage === 'blog' ? 'active' : ''}`}
               onMouseEnter={() => setActiveDropdown('blog')}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="nav-btn">Blog</button>
+              <button 
+                className="nav-btn"
+                onClick={() => dispatch(navigateTo('blog'))}
+              >
+                Blog
+              </button>
               <ul className={`dropdown-menu ${activeDropdown === 'blog' ? 'show' : ''}`}>
                 {menuItems.blog.map((item, index) => (
-                  <li key={index}><a href={item.href}>{item.label}</a></li>
+                  <li key={index}>
+                    <a 
+                      href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        dispatch(navigateTo('blog'));
+                      }}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
                 ))}
               </ul>
             </li>
 
-            <li className="nav-item"><a href="#contact">Contact</a></li>
+            {/* Contact Navigation Button — Now explicitly updates Redux store view on click */}
+            <li className={`nav-item ${currentPage === 'contact' ? 'active' : ''}`}>
+              <a 
+                href="#contact" 
+                onClick={(e) => { 
+                  e.preventDefault(); 
+                  dispatch(navigateTo('contact')); 
+                }}
+              >
+                Contact
+              </a>
+            </li>
           </ul>
           
           <button className="cta-btn">Free Join Us</button>

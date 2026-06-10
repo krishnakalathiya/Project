@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const navSlice = createSlice({
   name: 'navigation',
   initialState: {
-    currentPage: 'register', // Default to register view based on request
+    currentPage: 'home', 
   },
   reducers: {
     navigateTo: (state, action) => {

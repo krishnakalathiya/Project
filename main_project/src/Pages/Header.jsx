@@ -51,6 +51,7 @@ const Header = ({ onLoginClick }) => {
             <span className="separator">|</span>
             
             <a 
+            
               href="#login" 
               onClick={(e) => {
                 e.preventDefault(); 
@@ -59,7 +60,6 @@ const Header = ({ onLoginClick }) => {
             >
               Login / Register
             </a>
-
           </div>
         </div>
       </div>

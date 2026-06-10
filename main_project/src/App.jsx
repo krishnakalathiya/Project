@@ -56,7 +56,7 @@ function App() {
       {/* 2. ISOLATED LOGIN CARD HEADER VIEW */}
       {currentPage === 'login' && (
         <div className="login-page-view">
-          <LoginHeader onBackClick={() => dispatch(navigateTo('home'))} />
+          <LoginHeader />
           <Footer />
         </div>
       )}

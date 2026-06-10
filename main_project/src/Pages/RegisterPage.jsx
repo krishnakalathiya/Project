@@ -5,34 +5,34 @@ import { updateFormField, submitRegistrationStart, submitRegistrationSuccess } f
 
 const RegisterPage = () => {
   const dispatch = useDispatch();
-  
-  // Local UI presentation hook states
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Extract variables natively out from our combined Redux framework layers
-  const formValues = useSelector((state) => state.auth.registrationForm);
-  const isSubmitting = useSelector((state) => state.auth.isSubmitting);
-  const successMessage = useSelector((state) => state.auth.successMessage);
+  const formValues = useSelector((state) => state.auth?.registrationForm || { email: '', phone: '', password: '' });
+  const isSubmitting = useSelector((state) => state.auth?.isSubmitting || false);
+  const successMessage = useSelector((state) => state.auth?.successMessage || '');
 
   const handleInputChange = (field, value) => {
-    dispatch(updateFormField({ field, value }));
+    if (updateFormField) {
+      dispatch(updateFormField({ field, value }));
+    }
   };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (!searchQuery.trim()) return;
-    console.log("Global searching query index for:", searchQuery);
+    console.log("Searching directory index records for:", searchQuery);
   };
 
   const handleRegistrationAction = (e) => {
     e.preventDefault();
-    dispatch(submitRegistrationStart());
-    
-    // Simulate API registration network processing timings asynchronously
-    setTimeout(() => {
-      dispatch(submitRegistrationSuccess("Account successfully processed under Redux management!"));
-    }, 1200);
+    if (submitRegistrationStart) {
+      dispatch(submitRegistrationStart());
+      setTimeout(() => {
+        dispatch(submitRegistrationSuccess("Account successfully created!"));
+        dispatch(navigateTo('home'));
+      }, 200);
+    }
   };
 
   const menuItems = {
@@ -45,20 +45,20 @@ const RegisterPage = () => {
   return (
     <div className="liggeet-register-page-wrapper">
       
-      {/* ==================== 1. TOP UTILITY UTILITY BANNER ==================== */}
+      {/* 1. Top Utility Status Row Bar */}
       <div className="reg-top-bar">
-        <div className="reg-center-container">
+        <div className="reg-center-container utility-row-flex-track">
           <div className="utility-info-left">
             <span className="address-info">2972 Westheimer Rd. Santa Ana, Illinois 85486</span>
             <a href="mailto:info@templatepath.com" className="email-info">info@templatepath.com</a>
           </div>
-          <button className="top-login-register-btn" onClick={() => dispatch(navigateTo('home'))}>
+          <button className="top-login-register-btn" onClick={() => dispatch(navigateTo('login'))}>
             Login / Register
           </button>
         </div>
       </div>
 
-      {/* ==================== 2. NAVIGATION BAR CONTAINER ==================== */}
+      {/* 2. Main Navigation Bar Row Header */}
       <div className="reg-nav-row">
         <div className="reg-center-container nav-flex-alignment">
           
@@ -88,7 +88,9 @@ const RegisterPage = () => {
                   onMouseEnter={() => setActiveDropdown(key)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  <button className="reg-nav-btn">{key.charAt(0).toUpperCase() + key.slice(1)}</button>
+                  <button className="reg-nav-btn" onClick={() => dispatch(navigateTo(key === 'admissions' ? 'careers' : key))}>
+                    {key.charAt(0).toUpperCase() + key.slice(1)}
+                  </button>
                   <ul className={`reg-dropdown-menu ${activeDropdown === key ? 'show' : ''}`}>
                     {menuItems[key].map((item, idx) => (
                       <li key={idx}><a href={item.href}>{item.label}</a></li>
@@ -96,7 +98,7 @@ const RegisterPage = () => {
                   </ul>
                 </li>
               ))}
-              <li className="reg-nav-item"><a href="#contact">Contact</a></li>
+              <li className="reg-nav-item"><a href="#contact" onClick={(e) => { e.preventDefault(); dispatch(navigateTo('contact')); }}>Contact</a></li>
             </ul>
           </nav>
 
@@ -119,7 +121,7 @@ const RegisterPage = () => {
         </div>
       </div>
 
-      {/* ==================== 3. CHESS BG BREADCRUMB BANNER ==================== */}
+      {/* 3. Dark Backdrop Video Banner Layer */}
       <div className="reg-hero-banner">
         <div className="reg-center-container text-layer-z">
           <div className="breadcrumb-nav-path">
@@ -137,7 +139,7 @@ const RegisterPage = () => {
         </div>
       </div>
 
-      {/* ==================== 4. DATA INPUT FORM LAYOUT CARD ==================== */}
+      {/* 4. Registration Input workspace container */}
       <div className="reg-form-workspace-area">
         <div className="reg-form-card">
           <h2 className="reg-form-card-title">Register</h2>
@@ -146,7 +148,7 @@ const RegisterPage = () => {
 
           <form className="reg-actual-form" onSubmit={handleRegistrationAction}>
             
-            {/* Field A: Email */}
+            {/* Field A: Email Row */}
             <div className="reg-field-group">
               <label className="reg-field-label">Email</label>
               <div className="reg-input-inner-wrapper">
@@ -160,14 +162,14 @@ const RegisterPage = () => {
                   type="text" 
                   placeholder="Type Your Username" 
                   className="reg-input-element"
-                  value={formValues.email}
+                  value={formValues.email || ''}
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   required
                 />
               </div>
             </div>
 
-            {/* Field B: Phone */}
+            {/* Field B: Phone Row */}
             <div className="reg-field-group">
               <label className="reg-field-label">Phone <span className="recommended-badge">(Recommended)</span></label>
               <div className="reg-input-inner-wrapper">
@@ -181,14 +183,14 @@ const RegisterPage = () => {
                   type="tel" 
                   placeholder="Type Your Phone Number" 
                   className="reg-input-element"
-                  value={formValues.phone}
+                  value={formValues.phone || ''}
                   onChange={(e) => handleInputChange('phone', e.target.value)}
                   required
                 />
               </div>
             </div>
 
-            {/* Field C: Password */}
+            {/* Field C: Password Row */}
             <div className="reg-field-group">
               <label className="reg-field-label">Password</label>
               <div className="reg-input-inner-wrapper">
@@ -202,24 +204,24 @@ const RegisterPage = () => {
                   type="password" 
                   placeholder="Type Your Password" 
                   className="reg-input-element"
-                  value={formValues.password}
+                  value={formValues.password || ''}
                   onChange={(e) => handleInputChange('password', e.target.value)}
                   required
                 />
               </div>
             </div>
 
-            {/* Submission Action Button */}
+            {/* Submit Control Row */}
             <div className="reg-submit-row">
               <button type="submit" className="reg-submit-button" disabled={isSubmitting}>
                 {isSubmitting ? "Creating..." : "Create Account"}
               </button>
             </div>
 
-            {/* Alternate Login Trigger Anchor Link */}
+            {/* Redux View Switch link row parameters */}
             <div className="reg-footer-row">
               <span className="reg-footer-divider-text">Already a member?</span>
-              <span className="reg-footer-login-link" onClick={() => dispatch(navigateTo('home'))}>
+              <span className="reg-footer-login-link" onClick={() => dispatch(navigateTo('login'))}>
                 Login
               </span>
             </div>
@@ -227,7 +229,6 @@ const RegisterPage = () => {
           </form>
         </div>
 
-        {/* Floating visual accent structure background rings matching screenshots template profile */}
         <div className="reg-card-corner-ring-accent"></div>
       </div>
 

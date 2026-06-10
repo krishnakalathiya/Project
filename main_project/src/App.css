@@ -13,7 +13,7 @@
 }
 
 .liggeet-header {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   width: 100%;
 }
 
@@ -164,7 +164,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-family: inherit;
+  font-family: Arial, sans-serif;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -1585,7 +1585,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   color: #333333;
 }
 
@@ -1596,7 +1596,7 @@
 }
 
 .logo-palm-marina .brand-main-text {
-  font-family: 'Georgia', serif;
+  font-family: Arial, sans-serif;
   font-size: 26px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -2539,7 +2539,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-family: inherit;
+  font-family: Arial, sans-serif;
 }
 
 .reg-nav-item.active::after {
@@ -2584,7 +2584,6 @@
   font-weight: 600;
 }
 
-/* Header Integrated Search engine tracking block input */
 .header-search-form {
   display: flex;
   align-items: center;
@@ -2618,9 +2617,8 @@
   position: relative;
   width: 100%;
   min-height: 420px;
-  /* Implements dark backdrop filter blend onto graphic asset layout structure */
   background: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)),
-              url('https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=1600&auto=format&fit=crop') no-repeat center center/cover;
+              url('https://html.tonatheme.com/2025/liggeet/assets/images/background/bg-image-09.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
 }
@@ -2652,7 +2650,7 @@
 .reg-hero-description { font-size: 16px; line-height: 1.65; color: rgba(255, 255, 255, 0.85); }
 
 /* ==========================================================================
-   4. Registration Multi-Field Inputs Form Box Container (Screenshots 2 & 3)
+   4. Registration Multi-Field Inputs Form Box Container
    ========================================================================== */
 .reg-form-workspace-area {
   position: relative;
@@ -2666,7 +2664,7 @@
 
 .reg-form-card {
   width: 100%;
-  max-width: 660px; /* Aligns perfectly with centered column box footprint metrics */
+  max-width: 660px; 
   background-color: #ffffff;
   padding: 0 15px;
   display: flex;
@@ -2706,7 +2704,6 @@
   font-weight: 500;
 }
 
-/* Master internal input frame engine supporting absolute inline image masks */
 .reg-input-inner-wrapper {
   position: relative;
   width: 100%;
@@ -2720,7 +2717,7 @@
 .reg-inner-icon {
   position: absolute;
   left: 20px;
-  color: var(--primary-pink); /* Signature active branding vector icon element accent color */
+  color: var(--primary-pink); 
   display: flex;
   align-items: center;
 }
@@ -2732,17 +2729,16 @@
   border: none;
   outline: none;
   background: transparent;
-  padding: 22px 20px 22px 54px; /* Sets gutter depth wide enough to bypass inner left icon */
+  padding: 22px 20px 22px 54px; 
   font-size: 14px;
   color: #1d2631;
 }
 
 .reg-input-element::placeholder {
-  color: var(--cyan-placeholder); /* Signature template typography selection placeholder tint */
+  color: var(--cyan-placeholder); 
   opacity: 0.9;
 }
 
-/* Centered Execution Button specifications */
 .reg-submit-row {
   width: 100%;
   display: flex;
@@ -2751,7 +2747,7 @@
 }
 
 .reg-submit-button {
-  background-color: #1c2d3d; /* Slate dark profile button block overlay background */
+  background-color: #1c2d3d; 
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
@@ -2771,7 +2767,6 @@
   cursor: not-allowed;
 }
 
-/* Alert Boxes notification styling */
 .form-success-alert-ui {
   width: 100%;
   background-color: #e6f6f7;
@@ -2784,7 +2779,6 @@
   text-align: center;
 }
 
-/* Redirect Footnote Links Row positioning profiles */
 .reg-footer-row {
   display: flex;
   justify-content: center;
@@ -2805,11 +2799,10 @@
 
 .reg-footer-login-link:hover { text-decoration: underline; }
 
-/* Responsive Adaptive Fluid Queries Rules */
 @media (max-width: 768px) {
   .nav-flex-alignment { flex-direction: column; height: auto; padding: 20px; gap: 15px; }
   .reg-nav-links .reg-nav-item > a { padding: 15px 10px; }
-  .reg-submit-button { width: 100%; } /* Automatically stretches row button execution block on smartphones */
+  .reg-submit-button { width: 100%; } 
   .breadcrumb-nav-path { top: -45px; }
 }
 
@@ -2841,7 +2834,6 @@
   align-items: stretch;
 }
 
-/* Nav Flex Grid Elements */
 .nav-flex-alignment {
   display: flex;
   justify-content: space-between;
@@ -2862,10 +2854,9 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-family: inherit;
+  font-family: Arial, sans-serif;
 }
 
-/* Orange Active Navigation Indicator Bar */
 .acad-nav-item.active::after {
   content: '';
   position: absolute;
@@ -2876,7 +2867,6 @@
   background-color: #f29924;
 }
 
-/* Navigation Dropdown List Overlays */
 .acad-dropdown-menu {
   position: absolute;
   top: 100%;
@@ -2909,13 +2899,12 @@
 }
 
 /* ==========================================================================
-   Historic Architecture Hero Layer (Screenshot Match)
+   Historic Architecture Hero Layer
    ========================================================================== */
 .acad-hero-banner {
   position: relative;
   width: 100%;
   min-height: 440px;
-  /* Uses high resolution architecture sample overlayed with standard 74% opacity dark filter track */
   background: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)),
               url('https://html.tonatheme.com/2025/liggeet/assets/images/background/bg-image-07.jpg') no-repeat center center/cover;
   display: flex;
@@ -2971,7 +2960,6 @@
   align-items: center;
 }
 
-/* Left Content Column Styling */
 .about-liggeet-left-col {
   display: flex;
   flex-direction: column;
@@ -2980,7 +2968,7 @@
 .about-section-tagline {
   font-size: 15px;
   font-weight: 700;
-  color: #ff526c; /* Signature pink accent color */
+  color: #ff526c; 
   text-transform: capitalize;
   letter-spacing: 1.5px;
   margin-bottom: 20px;
@@ -2989,7 +2977,7 @@
 .about-section-heading {
   font-size: 40px;
   font-weight: 800;
-  color: #1a2238; /* Slate dark blue layout font */
+  color: #1a2238; 
   line-height: 1.25;
   margin-bottom: 30px;
 }
@@ -2998,18 +2986,17 @@
   font-size: 15px;
   line-height: 1.65;
   color: #1a2238;
-  font-weight: 600; /* Bold leading descriptive string block */
+  font-weight: 600; 
   margin-bottom: 24px;
 }
 
 .about-section-desc-secondary {
   font-size: 14px;
   line-height: 1.7;
-  color: #666666; /* Muted subtext string color */
+  color: #666666; 
   margin-bottom: 40px;
 }
 
-/* Counter Statistics Grid Layout */
 .about-metrics-counter-row {
   display: flex;
   justify-content: space-between;
@@ -3038,7 +3025,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Right Side Image Frame Setup */
 .about-liggeet-right-col {
   width: 100%;
   height: 100%;
@@ -3060,10 +3046,9 @@
   display: block;
 }
 
-/* Responsive Fluid Adjustments for Mobile and Tablets */
 @media (max-width: 992px) {
   .split-grid-layout {
-    grid-template-columns: 1fr; /* Collapses elements into a stacked layout list */
+    grid-template-columns: 1fr; 
     gap: 40px;
   }
   .about-liggeet-split-section {
@@ -3079,7 +3064,7 @@
 }
 
 /* ==========================================================================
-   Academics Page Addition: Admissions Call-To-Action Banner Layer
+   Academics Page 
    ========================================================================== */
 .acad-admissions-cta-section {
   width: 100%;
@@ -3087,29 +3072,27 @@
   padding: 60px 0 90px 0;
 }
 
-/* Master wrapper utilizing soft off-pink frame canvas track */
 .cta-banner-inner-box {
   position: relative;
   width: 100%;
-  max-width: 760px; /* Precise layout block span to match screen footprint aspect ratio */
+  max-width: 760px;
   margin: 0 auto;
-  background-color: #fff5f5; /* Light subtle pink matching card grid */
+  background-color: #fff5f5; 
   border-radius: 4px;
-  padding: 40px 50px 40px 90px; /* Extra left padding handles hanging bell circle offset overlap */
+  padding: 40px 50px 40px 90px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Hanging left absolute badge container shape code rules */
 .cta-bell-icon-badge {
   position: absolute;
-  left: -40px; /* Offset push position to make icon hover outside of the pink area */
+  left: -40px; 
   top: 50%;
   transform: translateY(-50%);
   width: 90px;
   height: 90px;
-  background-color: #f29924; /* Signature rich solid golden orange color profile */
+  background-color: #f29924; 
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -3122,11 +3105,9 @@
 .cta-bell-icon-badge svg {
   width: 32px;
   height: 32px;
-  /* Fills vector graphic shapes safely */
   fill: currentColor;
 }
 
-/* Middle Text Node Content Alignment elements */
 .cta-banner-text-contents {
   display: flex;
   flex-direction: column;
@@ -3136,7 +3117,7 @@
 .cta-mini-tagline {
   font-size: 15px;
   font-weight: 600;
-  color: #ff526c; /* Core branding pink matching layout items */
+  color: #ff526c; 
   letter-spacing: 2px;
   text-transform: capitalize;
 }
@@ -3144,14 +3125,14 @@
 .cta-main-heading {
   font-size: 26px;
   font-weight: 800;
-  color: #0c2238; /* Core dark blue layout palette accent */
+  color: #0c2238; 
   margin: 0;
   letter-spacing: -0.3px;
 }
 
 /* Primary Action Link Button Style block */
 .cta-apply-now-btn {
-  background-color: #ff526c; /* Dynamic pink background button */
+  background-color: #ff526c; 
   color: #ffffff;
   border: none;
   border-radius: 2px;
@@ -3166,7 +3147,7 @@
 }
 
 .cta-apply-now-btn:hover {
-  background-color: #0c2238; /* Changes to dark blue on active pointer focus tracking */
+  background-color: #0c2238; 
 }
 
 .btn-arrow-vector {
@@ -3174,7 +3155,6 @@
   font-weight: bold;
 }
 
-/* Fluid responsive breakdown layout overrides for smaller viewports */
 @media (max-width: 768px) {
   .cta-banner-inner-box {
     flex-direction: column;
@@ -3202,19 +3182,15 @@
     justify-content: center;
   }
 }
-
-/* ==========================================================================
-   Academics Page Addition: 4-Column Department Course Grid
-   ========================================================================== */
 .acad-departments-grid-section {
   width: 100%;
   background-color: #ffffff;
-  padding: 40px 0 120px 0; /* Clean separation layout padding fields */
+  padding: 40px 0 120px 0; 
 }
 
 .departments-grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Generates 4 equal flexible column fractions */
+  grid-template-columns: repeat(4, 1fr); 
   width: 100%;
 }
 
@@ -3242,32 +3218,31 @@
 }
 
 .dept-card-title:hover {
-  color: #ff526c; /* Turns to theme pink on hover states */
+  color: #ff526c; 
 }
 
 .dept-card-description {
   font-size: 15px;
   line-height: 1.7;
-  color: #666666; /* Subdued clean paragraph tone */
+  color: #666666; 
   margin: 0;
 }
 
-/* Responsive Adaptive Fluid Breakpoints to safely collapse the grid */
 @media (max-width: 992px) {
   .departments-grid-container {
-    grid-template-columns: repeat(2, 1fr); /* 2x2 grid layout format on tablet screens */
+    grid-template-columns: repeat(2, 1fr); 
   }
   .department-grid-card {
     border-bottom: 1px solid #eaeaea;
   }
   .department-grid-card:nth-child(2n):not(:last-child) {
-    border-right: none; /* Safely cleans column tracks on staggered grids */
+    border-right: none; 
   }
 }
 
 @media (max-width: 576px) {
   .departments-grid-container {
-    grid-template-columns: 1fr; /* Full width stacked vertical column rows on smartphone views */
+    grid-template-columns: 1fr; 
   }
   .department-grid-card {
     border-right: none !important;
@@ -3386,7 +3361,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-family: inherit;
+  font-family: Arial, sans-serif;
 }
 
 .careers-nav-links .careers-nav-item > a:hover,
@@ -4389,7 +4364,7 @@
 .header-search-btn svg { width: 16px; height: 16px; }
 
 /* ==========================================================================
-   3. White Header Title Block (Screenshot 1 Layout Match)
+   3. White Header Title Block 
    ========================================================================== */
 .faq-title-canvas-viewport {
   width: 100%;
@@ -4445,7 +4420,7 @@
 }
 
 /* ==========================================================================
-   4. Core Symmetrical Accordion Rows Section (Screenshots 2 & 3 Match)
+   4. Core Symmetrical Accordion Rows Section 
    ========================================================================== */
 .faq-accordion-grid-section {
   width: 100%;
@@ -4499,7 +4474,7 @@
   cursor: pointer;
   text-align: left;
   outline: none;
-  font-family: inherit;
+  font-family: Arial, sans-serif;
 }
 
 .faq-question-string-label {
@@ -5058,7 +5033,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-family: inherit;
+  font-family: Arial, sans-serif;
 }
 
 .contact-nav-links .contact-nav-item > a:hover,
@@ -5257,9 +5232,6 @@
 
 .text-lowercase { text-transform: lowercase; }
 
-/* ==========================================================================
-   6. Send Us A Message Form Submission Block Row (Screenshot 4 Match)
-   ========================================================================== */
 .contact-messaging-form-section {
   width: 100%;
   background-color: #ffffff;
@@ -5317,7 +5289,7 @@
   padding: 20px 24px;
   font-size: 15px;
   color: #0c2238;
-  font-family: inherit;
+  font-family: Arial, sans-serif;
 }
 
 .form-input-text-field-element::placeholder,

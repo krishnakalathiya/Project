@@ -1,33 +1,31 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { navigateTo } from './store/navSlice';
-
-import Header from './Pages/Header';
-import FeaturesSection from './Pages/FeaturesSection';
-import AboutOpenDay from './Pages/AboutOpenDay';
-import LabFacilities from './Pages/LabFacilities';
-import StatsSection from './Pages/StatsSection';
-import ShowcaseGrid from './Pages/ShowcaseGrid';
-import OurStudies from './Pages/OurStudies';
-import LatestNews from './Pages/LatestNews';
-import HeroCarousel from './Pages/HeroCarousel';
-import TrustedLogos from './Pages/TrustedLogos';
-import InstagramFeed from './Pages/InstagramFeed';
-import NewsletterBanner from './Pages/NewsletterBanner';
-import LoginHeader from './Pages/login';
-import RegisterPage from './Pages/RegisterPage';
-import AcademicsPage from './Pages/AcademicsPage';
-import CareersPage from './Pages/CareersPage';
-import FaqPage from './Pages/FaqPage';
-import BlogPage from './Pages/BlogPage';
-import ContactPage from './Pages/ContactPage';
-import Footer from './Pages/Footer';
+import { navigateTo } from './store/navSlice.jsx';
+import Header from './Pages/Header.jsx';
+import FeaturesSection from './Pages/FeaturesSection.jsx';
+import AboutOpenDay from './Pages/AboutOpenDay.jsx';
+import LabFacilities from './Pages/LabFacilities.jsx';
+import StatsSection from './Pages/StatsSection.jsx';
+import ShowcaseGrid from './Pages/ShowcaseGrid.jsx';
+import OurStudies from './Pages/OurStudies.jsx';
+import LatestNews from './Pages/LatestNews.jsx';
+import HeroCarousel from './Pages/HeroCarousel.jsx';
+import TrustedLogos from './Pages/TrustedLogos.jsx';
+import InstagramFeed from './Pages/InstagramFeed.jsx';
+import NewsletterBanner from './Pages/NewsletterBanner.jsx';
+import LoginHeader from './Pages/login.jsx';
+import RegisterPage from './Pages/RegisterPage.jsx';
+import AcademicsPage from './Pages/AcademicsPage.jsx';
+import CareersPage from './Pages/CareersPage.jsx';
+import FaqPage from './Pages/FaqPage.jsx';
+import BlogPage from './Pages/BlogPage.jsx';
+import ContactPage from './Pages/ContactPage.jsx';
+import Footer from './Pages/Footer.jsx';
 import './App.css';
 
 function App() {
   const dispatch = useDispatch();
   
-  // Grabs the current page routing name straight from the Redux store
   const currentPage = useSelector((state) => state.navigation.currentPage);
 
   return (

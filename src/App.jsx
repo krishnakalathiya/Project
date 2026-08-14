@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'React';
 import { useSelector, useDispatch } from 'react-redux';
-import { navigateTo } from './store/navSlice.jsx';
+import { navigateTo } from './Store/navSlice.jsx';
 import Header from './Pages/Header.jsx';
 import FeaturesSection from './Pages/FeaturesSection.jsx';
 import AboutOpenDay from './Pages/AboutOpenDay.jsx';

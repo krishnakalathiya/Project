@@ -13,7 +13,7 @@ import HeroCarousel from './Pages/HeroCarousel.jsx';
 import TrustedLogos from './Pages/TrustedLogos.jsx';
 import InstagramFeed from './Pages/InstagramFeed.jsx';
 import NewsletterBanner from './Pages/NewsletterBanner.jsx';
-import LoginHeader from './Pages/login.jsx';
+import LoginHeader from './Pages/Login.jsx';
 import RegisterPage from './Pages/RegisterPage.jsx';
 import AcademicsPage from './Pages/AcademicsPage.jsx';
 import CareersPage from './Pages/CareersPage.jsx';

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { navigateTo } from '../Store/navSlice.jsx';
-import { updateFormField, submitRegistrationStart, submitRegistrationSuccess } from '../store/authSlice';
+import { updateFormField, submitRegistrationStart, submitRegistrationSuccess } from '../Store/authSlice.jsx';
 
 const RegisterPage = () => {
   const dispatch = useDispatch();

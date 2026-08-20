@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // Import Redux dispatch and selector hooks to communicate with the store
 import { useDispatch, useSelector } from 'react-redux';
-import { navigateTo } from '../store/navSlice';
+import { navigateTo } from '../Store/navSlice.jsx';
 
 const Header = ({ onLoginClick }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);

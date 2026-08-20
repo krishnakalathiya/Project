@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { navigateTo } from '../store/navSlice';
+import { navigateTo } from '../Store/navSlice.jsx';
 import { updateFormField, submitRegistrationStart, submitRegistrationSuccess } from '../store/authSlice';
 
 const RegisterPage = () => {

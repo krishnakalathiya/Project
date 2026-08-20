@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { navigateTo } from '../store/navSlice';
+import { navigateTo } from '../Store/navSlice.jsx';
 
 const CareersPage = () => {
   const dispatch = useDispatch();

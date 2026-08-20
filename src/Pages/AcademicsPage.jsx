@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { navigateTo } from '../store/navSlice';
-import AboutOpenDay from './AboutOpenDay';
-import Footer from './Footer';
-import HeroCarousel from './HeroCarousel'
+import { navigateTo } from '../Store/navSlice.jsx';
+import AboutOpenDay from './AboutOpenDay.jsx';
+import Footer from './Footer.jsx';
+import HeroCarousel from './HeroCarousel.jsx'
 
 const AcademicsPage = () => {
   const dispatch = useDispatch();
@@ -240,7 +240,7 @@ const AcademicsPage = () => {
       </section>
 
         <div>
-            <footer/>
+            <Footer/>
         </div>
 
         <div>

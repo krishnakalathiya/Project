@@ -1,4 +1,4 @@
-import React from 'React';
+import react from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { navigateTo } from './Store/navSlice.jsx';
 import Header from './Pages/Header.jsx';
